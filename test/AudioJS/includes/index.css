@@ -1,0 +1,28 @@
+
+body {
+	border: 1px solid #999;
+	font-family: Calibri;
+	margin: 0 auto;
+	width: 99%;
+
+}
+
+.audiojs {
+	width: 100%;
+}
+
+.time {
+	display: none;
+}
+
+.scrubber {
+	display: none;
+}
+
+#imgg {
+	width: 100%;
+}
+
+#logo {
+	width: 60%;
+}

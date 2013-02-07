@@ -25,12 +25,20 @@ function Program(){
 	this.globalhouse;
 	this.descriptionP;
 
-	this.programBasic = function(_idP, _hourI, _hourE){
-
-	};
-
-	this.programComplete = function(){
-
+	this.programDates = function(_idP, _nameP, _author, _image, _typeP, _hourI, _hourE, _facebook, _twitter, _soundcloud, _youtube, _globalhouse, _descriptionP){
+		this.idP = _idP;
+		this.nameP = _nameP;
+		this.author = _author;
+		this.image = _image;
+		this.typeP = _typeP;
+		this.hourI = _hourI;
+		this.hourE = _hourE;
+		this.facebook = _facebook;
+		this.twitter = _twitter;
+		this.soundcloud = _soundcloud;
+		this.youtube = _youtube;
+		this.globalhouse = _globalhouse;
+		this.descriptionP = _descriptionP;
 	};
 
 }
@@ -150,19 +158,40 @@ function ManagerXML(_fileXML){
 				var horaI = n[0];
 				var horaE = n[1];
 
-				if(horaI <= this.dateUTC.sHour && this.dateUTC.sHour < horaE){ // controlar si es el dia siguiente
-					console.log("Programa actual: " + today[i*2+1].textContent);
-					// llamar al objeto para meter el nombre y las horas
+				if(horaI <= this.dateUTC.sHour && this.dateUTC.sHour < horaE){
 					
-					if( (i+1)*2+1 < today.length ){
-						console.log("Programa siguiente: " + today[(i+1)*2+1].textContent);	
-						// cargar la hora de inicio y fin
-						// llamar al objeto para meter el nombre y las horas
-					} else {
-						console.log("Programa siguiente: " + tomorrow[1].textContent);
-						// cargar la hora de inicio y fin
-						// llamar al objeto para meter el nombre y las horas
+					// llamar al objeto para meter los datos si son distintos
+					if(this.programA.idP != today[i*2+1].textContent) {
+						
+						console.log("Actualizar"); ////////
+
+						var _idP = today[i*2+1].textContent;
+						var _nameP;
+						var _author;
+						var _image;
+						var _typeP;
+						var _hourI = horaI;
+						var _hourE = horaE;
+						var _facebook;
+						var _twitter;
+						var _soundcloud;
+						var _youtube;
+						var _globalhouse;
+						var _descriptionP;
+						this.programA.programDates(_idP, _nameP, _author, _image, _typeP, _hourI, _hourE, _facebook, _twitter, _soundcloud, _youtube, _globalhouse, _descriptionP);
+						
+						if( (i+1)*2+1 < today.length ){
+							console.log("Programa siguiente: " + today[(i+1)*2+1].textContent);
+
+							// cargar la hora de inicio y fin
+							// llamar al objeto para meter los datos si son distintos
+						} else {
+							console.log("Programa siguiente: " + tomorrow[1].textContent);
+							// cargar la hora de inicio y fin
+							// llamar al objeto para meter los datos si son distintos
+						}
 					}
+					
 
 					i = (today.length-1)/2;
 				}
@@ -172,11 +201,6 @@ function ManagerXML(_fileXML){
 			console.log("Se produjo un error en la carga de los datos");
 		}    
 
-	};
-
-	// carga los datos de los programas
-	this.loadDates = function(){
-		this.loadPrograms();
 	};
 
 }

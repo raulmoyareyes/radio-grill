@@ -1,0 +1,4 @@
+Poder seleccionar programas de vídeo o solo audio.
+Usar el diseño existente.
+Los programas se pueden repetir a lo largo de la semana.
+La programación es semanal.

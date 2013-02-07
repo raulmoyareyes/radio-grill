@@ -21,9 +21,7 @@ function Main(){
 		// lectura de datos
 		this.mXML = new ManagerXML("programacion.xml");
 		this.mXML.openFile();
-		this.mXML.loadDates();
-		this.actualP = this.mXML.programA;
-		this.nextP = this.mXML.programN;
+		this.actualize();
 
 		// creacion de la interfaz grafica
 		this.graphI = GraphInterface(this.actualP, this.nextP);
@@ -32,7 +30,7 @@ function Main(){
 	};
 
 	this.actualize = function(){
-		this.mXML.loadDates(); // solo si el programa ha acabado
+		this.mXML.loadPrograms(); // solo si el programa ha acabado
 		this.actualP = this.mXML.programA;
 		this.nextP = this.mXML.programN;
 	}

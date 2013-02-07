@@ -5,25 +5,25 @@
 			<item hour="0000-1600">ProgramaDomingo</item>
 		</sunday>
 		<monday>
-			<item hour="0000-1600">ProgramaLunes1</item>
-			<item hour="1600-1800">ProgramaLunes2</item>
-			<item hour="1800-2000">ProgramaLunes3</item>
+			<item hour="0000-1600">programalunes1</item>
+			<item hour="1600-1800">programalunes2</item>
+			<item hour="1800-2359">programalunes3</item>
 		</monday>
 		<tuesday>
-			<item hour="0010-1600">ProgramaMartes</item>
+			<item hour="0000-2359">welove</item>
 		</tuesday>
 		<wednesday>
-			<item hour="0000-1600">ProgramaMiercoles</item>
+			<item hour="0000-2359">programamiercoles</item>
 		</wednesday>
 		<thursday>
-			<item hour="0000-1600">ProgramaJueves</item>
+			<item hour="0000-2359">programajueves</item>
 		</thursday>
 		<friday>
-			<item hour="0000-1600">ProgramaViernes</item>
+			<item hour="0000-2359">programaviernes</item>
 		</friday>
 		<saturday>
-			<item hour="0000-0128">ProgramaSabado</item>
-			<item hour="0128-2359">ProgramaSabado2</item>
+			<item hour="0000-0128">programasabado</item>
+			<item hour="0128-2359">programasabado2</item>
 		</saturday>
 	</week>
 
