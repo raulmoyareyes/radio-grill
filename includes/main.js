@@ -1,3 +1,4 @@
+
 /*************************************************
 Radio Grill Project
 version: 1.0
@@ -15,27 +16,27 @@ function recursive(){
 
 function Main(){
 
-	this.mXML;
-	this.graphI;
-	this.actualP;
-	this.nextP;
-	
-	this.init = function(){
-		// lectura de datos
-		this.mXML = new ManagerXML("programacion.xml");
-		this.mXML.openFile();
-		this.actualize();
+    this.mXML;
+    this.graphI;
+    this.actualP;
+    this.nextP;
 
-		// creacion de la interfaz grafica
-		this.graphI = GraphInterface(this.actualP, this.nextP);
+    this.init = function(){
+        // lectura de datos
+        this.mXML = new ManagerXML("programacion.xml");
+        this.mXML.openFile();
+        this.actualize();
 
-		recursive();
-	};
+        // creacion de la interfaz grafica
+        this.graphI = GraphInterface(this.actualP, this.nextP);
 
-	this.actualize = function(){
-		this.mXML.loadPrograms(); // solo si el programa ha acabado
-		this.actualP = this.mXML.programA;
-		this.nextP = this.mXML.programN;
-	};
+        recursive();
+    };
+
+    this.actualize = function(){
+        this.mXML.loadPrograms(); // solo si el programa ha acabado
+        this.actualP = this.mXML.programA;
+        this.nextP = this.mXML.programN;
+    };
 
 };
