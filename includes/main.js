@@ -33,6 +33,6 @@ function Main(){
 		this.mXML.loadPrograms(); // solo si el programa ha acabado
 		this.actualP = this.mXML.programA;
 		this.nextP = this.mXML.programN;
-	}
+	};
 
 };

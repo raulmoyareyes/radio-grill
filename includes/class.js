@@ -57,9 +57,9 @@ function DateUTC1 (){
 		this.hour = today.getUTCHours(); //hora 0-23
 		this.minutes = today.getUTCMinutes(); // minutos 0-59
 
-		if (this.hour+1 == 24) {
+		if (this.hour+1 === 24) {
 			this.hour = 0;
-			if (this.dayW+1 == 7){
+			if (this.dayW+1 === 7){
 				this.dayW = 0;
 			} else {
 				this.dayW += 1;
@@ -108,6 +108,7 @@ function DateUTC1 (){
 
 /*************************************************
 Clase para tratar el xml
+@param {documen} _fileXML fichero XML
 *************************************************/
 function ManagerXML(_fileXML){
 	this.file = _fileXML;
@@ -144,7 +145,7 @@ function ManagerXML(_fileXML){
 
 			var today = program[this.dateUTC.dayW*2+1].childNodes;
 			var tomorrow;
-			if(this.dateUTC.dayW+1 == 7){ // controlar que no se acabe la semana
+			if(this.dateUTC.dayW+1 === 7){ // controlar que no se acabe la semana
 				tomorrow = program[1].childNodes; 
 			} else {
 				tomorrow = program[(this.dateUTC.dayW+1)*2+1].childNodes; 
@@ -161,7 +162,7 @@ function ManagerXML(_fileXML){
 				if(horaI <= this.dateUTC.sHour && this.dateUTC.sHour < horaE){
 					
 					// llamar al objeto para meter los datos si son distintos
-					if(this.programA.idP != today[i*2+1].textContent) {
+					if(this.programA.idP !== today[i*2+1].textContent) {
 						
 						console.log("Actualizar"); ////////
 
@@ -208,6 +209,8 @@ function ManagerXML(_fileXML){
 
 /*************************************************
 Clase para interfaz grafica
+    @param {program} _actualP programa actual
+    @param {program} _nextP programa siguiente
 *************************************************/
 function GraphInterface(_actualP, _nextP){
 	this.actualP = _actualP;
@@ -215,15 +218,15 @@ function GraphInterface(_actualP, _nextP){
 
 	this.create = function(){
 
-	}
+	};
 
 	this.remove = function(){
 
-	}
+	};
 
 	this.actualize = function(){
 
-	}
+	};
 
 
 // 	function crearTabla() 
