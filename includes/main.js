@@ -4,9 +4,12 @@ version: 1.0
 Developer: Raúl Moya (www.raul-ce.tk)
 *************************************************/
 
+var view = new Main();
+view.init();
+
 function recursive(){
-	view.actualize();
-	setTimeout(recursive,1000); // aqui cambiar el valor para la repeticion
+    view.actualize();
+    setInterval(recursive,1000); // aqui cambiar el valor para la repeticion
 };
 
 
