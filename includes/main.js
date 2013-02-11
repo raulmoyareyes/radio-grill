@@ -30,8 +30,13 @@ function Main(){
 
     this.actualize = function(){
         this.mXML.loadPrograms(); // solo si el programa ha acabado
-        this.actualP = this.mXML.programA;
-        this.nextP = this.mXML.programN;
+        if(this.actualP !== this.mXML.programA){
+            this.actualP = this.mXML.programA;
+            this.nextP = this.mXML.programN;
+
+            console.log("Programa actual: " + this.actualP.nameP);
+            console.log("Programa siguiente: " + this.nextP.nameP);
+        }
     };
 
 };

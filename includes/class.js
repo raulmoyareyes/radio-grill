@@ -142,7 +142,6 @@ function ManagerXML(_fileXML){
             var program = this.programs.getElementsByTagName("week");
             program = program[0].childNodes;
             this.dateUTC.actualize();
-            //console.log(this.dateUTC.sHour);
 
             var today = program[this.dateUTC.dayW*2+1].childNodes;
             var tomorrow;
@@ -165,34 +164,56 @@ function ManagerXML(_fileXML){
                     // llamar al objeto para meter los datos si son distintos
                     if(this.programA.idP !== today[i*2+1].textContent) {
 
-                        console.log("Actualizar"); ////////
+                        var program2 = this.programs.getElementsByTagName(today[i*2+1].textContent);
 
                         var _idP = today[i*2+1].textContent;
-                        var _nameP;
-                        var _author;
-                        var _image;
-                        var _typeP;
+                        var _nameP = program2[0].childNodes[1].textContent;
+                        var _author = program2[0].childNodes[3].textContent;
+                        var _image = program2[0].childNodes[5].textContent;
+                        var _typeP = program2[0].childNodes[7].textContent;
                         var _hourI = horaI;
                         var _hourE = horaE;
-                        var _facebook;
-                        var _twitter;
-                        var _soundcloud;
-                        var _youtube;
-                        var _globalhouse;
-                        var _descriptionP;
+                        var _facebook = program2[0].childNodes[9].textContent;
+                        var _twitter = program2[0].childNodes[11].textContent;
+                        var _soundcloud = program2[0].childNodes[13].textContent;
+                        var _youtube = program2[0].childNodes[15].textContent;
+                        var _globalhouse = program2[0].childNodes[17].textContent;
+                        var _descriptionP = program2[0].childNodes[19].textContent;
                         this.programA.programDates(_idP, _nameP, _author, _image, _typeP, _hourI, _hourE, _facebook, _twitter, _soundcloud, _youtube, _globalhouse, _descriptionP);
 
-                        console.log("Programa actual: " + this.programA.idP);
                         if( (i+1)*2+1 < today.length ){
-                            console.log("Programa siguiente: " + today[(i+1)*2+1].textContent);
+                            var program2 = this.programs.getElementsByTagName(today[(i+1)*2+1].textContent);
 
-                            // cargar la hora de inicio y fin
-                            // llamar al objeto para meter los datos si son distintos
+                            _idP = today[(i+1)*2+1].textContent;
+                            horaIE = today[(i+1)*2+1].attributes[0].nodeValue;
+                            n = horaIE.split("-");
+                            horaI = n[0];
+                            horaE = n[1];
+                                                       
                         } else {
-                            console.log("Programa siguiente: " + tomorrow[1].textContent);
-                            // cargar la hora de inicio y fin
-                            // llamar al objeto para meter los datos si son distintos
+                            var program2 = this.programs.getElementsByTagName(tomorrow[1].textContent);
+
+                            _idP = tomorrow[1].textContent;
+                            horaIE = tomorrow[1].attributes[0].nodeValue;
+                            n = horaIE.split("-");
+                            horaI = n[0];
+                            horaE = n[1];
+                            
                         }
+                        _nameP = program2[0].childNodes[1].textContent;
+                        _author = program2[0].childNodes[3].textContent;
+                        _image = program2[0].childNodes[5].textContent;
+                        _typeP = program2[0].childNodes[7].textContent;
+                        _hourI = horaI;
+                        _hourE = horaE;
+                        _facebook = program2[0].childNodes[9].textContent;
+                        _twitter = program2[0].childNodes[11].textContent;
+                        _soundcloud = program2[0].childNodes[13].textContent;
+                        _youtube = program2[0].childNodes[15].textContent;
+                        _globalhouse = program2[0].childNodes[17].textContent;
+                        _descriptionP = program2[0].childNodes[19].textContent;
+                        
+                        this.programN.programDates(_idP, _nameP, _author, _image, _typeP, _hourI, _hourE, _facebook, _twitter, _soundcloud, _youtube, _globalhouse, _descriptionP);
                     }
 
 
