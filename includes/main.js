@@ -8,10 +8,7 @@ Developer: Raúl Moya (www.raul-ce.tk)
 var view = new Main();
 view.init();
 
-function recursive(){
-    view.actualize();
-    setInterval(recursive,1000); // aqui cambiar el valor para la repeticion
-};
+setInterval(function(){view.actualize();},1000); // aqui cambiar el valor para la repeticion
 
 
 function Main(){
@@ -29,8 +26,6 @@ function Main(){
 
         // creacion de la interfaz grafica
         this.graphI = GraphInterface(this.actualP, this.nextP);
-
-        recursive();
     };
 
     this.actualize = function(){

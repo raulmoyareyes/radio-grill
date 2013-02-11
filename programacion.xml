@@ -5,9 +5,9 @@
             <item hour="0000-1600">ProgramaDomingo</item>
         </sunday>
         <monday>
-            <item hour="0000-1600">programalunes1</item>
-            <item hour="1600-1800">programalunes2</item>
-            <item hour="1800-2359">programalunes3</item>
+            <item hour="0000-1634">programalunes1</item>
+            <item hour="1650-1651">programalunes2</item>
+            <item hour="1651-2359">programalunes3</item>
         </monday>
         <tuesday>
             <item hour="0000-2359">welove</item>

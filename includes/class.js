@@ -72,11 +72,11 @@ function DateUTC1 (){
     };
 
     this.dateString = function(){
-        if(this.hour < 10) {this.sHour = "0"+this.hour;}
+        if(this.hour < 10) {this.sHour = "0"+new String(this.hour);}
         else {this.sHour = this.hour;}
 
-        if(this.minutes < 10) {this.sHour += "0"+this.minutes;}
-        else {this.sHour += this.minutes;}
+        if(this.minutes < 10) {this.sHour += "0"+new String(this.minutes);}
+        else {this.sHour = this.sHour+new String(this.minutes);}
 
         switch(this.dayW){
             case 0:
@@ -142,6 +142,7 @@ function ManagerXML(_fileXML){
             var program = this.programs.getElementsByTagName("week");
             program = program[0].childNodes;
             this.dateUTC.actualize();
+            //console.log(this.dateUTC.sHour);
 
             var today = program[this.dateUTC.dayW*2+1].childNodes;
             var tomorrow;
@@ -181,6 +182,7 @@ function ManagerXML(_fileXML){
                         var _descriptionP;
                         this.programA.programDates(_idP, _nameP, _author, _image, _typeP, _hourI, _hourE, _facebook, _twitter, _soundcloud, _youtube, _globalhouse, _descriptionP);
 
+                        console.log("Programa actual: " + this.programA.idP);
                         if( (i+1)*2+1 < today.length ){
                             console.log("Programa siguiente: " + today[(i+1)*2+1].textContent);
 
