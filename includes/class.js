@@ -233,19 +233,53 @@ function ManagerXML(_fileXML){
 
 /*************************************************
 Clase para interfaz grafica
-    @param {program} _actualP programa actual
-    @param {program} _nextP programa siguiente
 *************************************************/
-function GraphInterface(_actualP, _nextP){
-    this.actualP = _actualP;
-    this.nextP = _nextP;
+function GraphInterface(){
+    this.actualP;
+    this.nextP;
+    
+    this.init = function(_actualP, _nextP){
+        this.actualP = _actualP;
+        this.nextP = _nextP;
+    };
 
     this.create = function(){
-        var elemento=document.createElement('p');
-        var texto=document.createTextNode(this.actualP.nameP);
-        elemento.appendChild(texto);
-        var obj=document.getElementsByTagName('body')[0];
+        
+        if(this.actualP.typeP === "audio"){
+            this.createAudio();
+        }else if(this.actualP.typeP === "video"){
+            this.createVideo();
+        }
+        
+    };
+    
+    this.createVideo = function(){
+        
+    };
+    
+    this.createAudio = function(){
+        var name=document.createTextNode(this.actualP.nameP);
+        var elemento=document.createElement('div');
+        elemento.appendChild(name);
+        
+        var present=document.createTextNode("Presenta: "+this.actualP.author+" ("+this.actualP.hourI+" "+this.actualP.hourE+")");
+        var elemento2=document.createElement('div');
+        elemento2.appendChild(present);
+        
+        var description=document.createTextNode("Info: "+this.actualP.descriptionP);
+        var elemento3=document.createElement('div');
+        elemento3.appendChild(description);
+        
+        var reproductor=document.createTextNode("reproductor audio");
+        var elemento4=document.createElement('div');
+        elemento4.appendChild(reproductor);
+        
+        // crear el contenedor
+        var obj=document.getElementById('content');
         obj.appendChild(elemento);
+        obj.appendChild(elemento4);
+        obj.appendChild(elemento2);
+        obj.appendChild(elemento3);
     };
 
     this.remove = function(){

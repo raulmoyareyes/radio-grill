@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<data>
+<Schedule>
+<Mon>
+<item time="0000-0100">Tranciberica</item>
+<item time="0100-0200">NowistheTime</item>
+<item time="0200-0300">rmx</item>
+<item time="0300-0500">Automatika</item>
+<item time="0500-1500">welove</item>
+<item time="1500-1600">time</item>
+<item time="1600-1800">mix</item>
+<item time="1800-2000">tomyloa</item>
+<item time="2000-2200">crix</item>
+<item time="2200-2400">DivineInspiration</item>
+</Mon>
+<Tue>
+<item time="0000-1800">welove</item>
+<item time="1800-2000">label</item>
+<item time="2000-2200">vivancos</item>
+<item time="2200-2400">marok</item>
+</Tue>
+<Wed>
+<item time="0000-1500">welove</item>
+<item time="1500-1600">time</item>
+<item time="1600-1800">mix</item>
+<item time="1800-2000">welove</item>
+<item time="2000-2200">ClubTime</item>
+<item time="2200-2400">TopDivine</item>
+</Wed>
+<Thu>
+<item time="0000-1800">welove</item>
+<item time="1800-1900">sito</item>
+<item time="1900-2100">patricio</item>
+<item time="2100-2200">Comunidadglobal</item>
+<item time="2200-2400">tnt</item>
+</Thu>
+<Fri>
+<item time="0000-1500">welove</item>
+<item time="1500-1600">time</item>
+<item time="1600-1800">because</item>
+<item time="1800-2000">MagikalHouse2</item>
+<item time="2000-2200">vivancos</item>
+<item time="2200-2400">sinner</item>
+</Fri>
+<Sat>
+<item time="0000-1500">welove</item>
+<item time="1500-1700">polo</item>
+<item time="1700-1900">ramos</item>
+<item time="1900-2000">canales</item>
+<item time="2000-2100">fred</item>
+<item time="2100-2400">welove</item>
+</Sat>
+<Sun>
+<item time="0000-1000">welove</item>
+<item time="0900-1100">DancingInMyHouse</item>
+<item time="1100-1200">houselover</item>
+<item time="1200-1400">otazo</item>
+<item time="1400-1600">garrido</item>
+<item time="1600-1700">experienceradio</item>
+<item time="1700-1800">Zona69</item>
+<item time="1800-2000">lovehouse</item>
+<item time="2000-2200">bambu</item>
+<item time="2200-2400">showroom</item>
+</Sun>
+</Schedule>
+<Shows>
+<item name="marok">
+<Name>Marok Essense</Name>
+<DJ>Paul Marok</DJ>
+<Description>Todo un deleite de sensaciones, acompañados de los ritmos mas potentes del momento,hits y toda la actualidad del panorama electronico nacional e internacional.Como siempre, escuchalo en exclusiva para Global House Radio.Os esperamos !</Description>
+<Image>marok.png</Image>
+<Status></Status>
+</item>
+<item name="saturday">
+<Name>SATURDAY LIVE SESSIONS </Name>
+<DJ>DJ LIVE</DJ>
+<Description>Comienza la tarde con energía, interactua, disfruta, sientelo y compártelo.Esto es, SATURDAYS LIVE SESSIONS !!</Description>
+<Image>ls.png</Image>
+<Status></Status>
+</item>
+<item name="especial">
+<Name>GLOBAL SOUND </Name>
+<DJ>AUDIOVISUAL EXPERIENCE</DJ>
+<Description>Si pensabas que lo habias vito todo, estas equivocado !! PAUL MAROK, JAMES D,CHRIX MARTIN Y TOMMY LOA te haran sentir algo mas que musica... Are you ready?</Description>
+<Image>gs2.png</Image>
+<Status></Status>
+</item>
+<item name="welove">
+<Name> WE LOVE BY GLOBAL HOUSE </Name>
+<DJ>We Love Dance Hits</DJ>
+
+<Status>&lt;a href=&quot;http://www.facebook.com/GlobalHouseRadio&quot; target=&quot;_blank&quot; &gt;&lt;img src=&quot;http://nuevaweb.globalhouse.es/programacion/network/facebook.png&quot; /&gt;&lt;/a&gt;
+
+&lt;a href=&quot;http://www.globalhouse.es&quot; target=&quot;_blank&quot; &gt;&lt;img src=&quot;http://nuevaweb.globalhouse.es/programacion/network/twitter.png&quot; /&gt;&lt;/a&gt;
+
+&lt;a href=&quot;http://www.globalhouse.es&quot; target=&quot;_blank&quot; &gt;&lt;img src=&quot;http://nuevaweb.globalhouse.es/programacion/network/soundcloud.png&quot; /&gt;&lt;/a&gt;
+
+&lt;a href=&quot;http://www.globalhouse.es&quot; target=&quot;_blank&quot; &gt;&lt;img src=&quot;http://nuevaweb.globalhouse.es/programacion/network/youtube.png&quot; /&gt;&lt;/a&gt;
+
+&lt;a href=&quot;http://www.globalhouse.es&quot; target=&quot;_blank&quot; &gt;&lt;img src=&quot;http://nuevaweb.globalhouse.es/programacion/network/blogger.png&quot; /&gt;&lt;/a&gt;
+
+&lt;a href=&quot;http://www.globalhouse.es&quot; target=&quot;_blank&quot; &gt;&lt;img src=&quot;http://nuevaweb.globalhouse.es/programacion/network/myspace.png&quot; /&gt;&lt;/a&gt;
+
+
+
+
+</Status>
+
+<Description>We Love es, sinonimo de calidad, diversion y amor por todo el musicón !.Los temazos que andas buscando ya tienen sitio y hora ... WE LOVE ! </Description>
+<Image>welove.png</Image>
+</item>
+<item name="NowistheTime">
+<Name>Now is the Time</Name>
+<DJ>German Ortiz</DJ>
+<Description>Radio Show de temática electrónica-trance con  Colaboraciones de diferentes partes del país que dan su punto de vista y presentan diferentes promos en exclusiva para éste radio show proveniente de la productora de Radio Shows Nominado dos veces a los NSD Awards. </Description>
+<Image>german.png</Image>
+<Status></Status>
+</item>
+<item name="FeelFree">
+<Name>Feel Free Radio Show</Name>
+<DJ>Mich Golden</DJ>
+<Description>Cada semana Mich Golden, DJ y productor gallego, nos trae el sonido club mas fresco y sonado. Sin duda todo un referente para estar al dia en cuanto a este estilo se refiero. Chart perosonal y sobre todo un repaso intenso al chat chart de ventas mas importante del mundo, beatport, nos haran sentir todas las emicones que nos ofrece el house music. Cita obligatoria, como no, en Global House Radio.</Description>
+<Image>mich.png</Image>
+<Status></Status>
+</item>
+<item name="Comunidadglobal">
+<Name>Comunidad Global House Radio</Name>
+<DJ>Juan GPS y Sonyi</DJ>
+<Description>Comunidad Global House ,un programa donde se suelen mezclar actualidad, buen humor y por supuesto la mejor musica house. No te pierdas el repaso al Top 10 mas famoso y potente de la red junto a Juan GPS y Sonyi.</Description>
+<Image>juan.png</Image>
+<Status></Status>
+</item>
+<item name="DivineInspiration">
+<Name>Divine Inspiration 2.0</Name>
+<DJ>Yeroy Dj</DJ>
+<Description>Comienza la semana con las ultimas novedades del panorama House en sus diferentes estilos, además de remixes y bootlegs de autor, en una sesión interactiva completamente en directo e improvisada de dos horas en las que además de solicitar tu track preferido podrás sentir la "Inspiración Divina" y mucho más.... </Description>
+<Image>yeroy.png</Image>
+<Status></Status>
+</item>
+<item name="Automatika">
+<Name>Automatika House</Name>
+<DJ>Moreno y Ferre</DJ>
+<Description>El sonido deep house y tech-house, ya tienen su rincon particular en global house radio. Todos los martes, Santi moreno y maurici ferre, deejays y productores nos traen los sonidos mas groove del momento en su show semanal que te ahara vibrar con el mejor sonido Tech House.</Description>
+<Image>maurici.png</Image>
+<Status></Status>
+</item>
+<item name="Zona69">
+<Name>Zona 69</Name>
+<DJ>Raul Fernandez</DJ>
+<Description>Zona69 programa  cargado de estrenos, entrevistas, sesiones de dj’s, y más cosas. Cada semana te hacemos bailar con los temas más nuevos,y  cancionessolo escucharás aquí. Zona69 , una forma de conectar con lo que te gusta.Esto no se escucha, esto se baila !</Description>
+<Image>raul.png</Image>
+<Status></Status>
+</item>
+<item name="ClubTime">
+<Name>Club Time Radio Show</Name>
+<DJ>Susinho</DJ>
+<Description>Club Time Radio Show, siempre mostrando las vertientes del House en todos sus estilos: Club House, Commercial, Progressive House Vocal, Tech House...Sin duda un Chart mas q recomendado tener en cuenta para saber los Tracks mas Sonados en las pistas de baile del mundo entero. Te espero! :)</Description>
+<Image>susino.png</Image>
+<Status></Status>
+</item>
+<item name="TopDivine">
+<Name>Top Divine</Name>
+<DJ>Yeroy Dj</DJ>
+<Description>Decubre el TOP de los TOPS mas completo de la red con sus cuatro tracklists in session de diez temas cada uno y en sus diferentes estilos: comercial, latin, electro-dutch y prog. Las cuarenta novedades semanales más potentes en todos los estilos solo en Top Divine, solo en Global House radio!!! </Description>
+<Image>topdivine.png</Image>
+<Status></Status>
+</item>
+<item name="DancingInMyHouse">
+<Name>Dancing In My House</Name>
+<DJ>Alfons Gras</DJ>
+<Description>Todas los viernes tienes una cita muy especial con las ultimas novedades del panorama clubbing actual. Alfons gras, te trae lo mas exclusivo de su maleta acompañado de grandes sesiones que te harán disfrutar, como siempre, del músico que solo podrás encontrar aquí ! Enjoy it !</Description>
+<Image>alfons.png</Image>
+<Status></Status>
+</item>
+<item name="Tranciberica">
+<Name>Tranciberica</Name>
+<DJ>Oscar Guez</DJ>
+<Description>El sonido trance tambien tiene su shueco el nuestra emisora. 60 minutos semanales donde vas a poder encontrar lo mas reciente del genero , acompañado como siempre , de sesiones apoteosicas donde podras experimentar el auntentico sonido trance!</Description>
+<Image>oscar.png</Image>
+<Status></Status>
+</item>
+<item name="MagikalHouse">
+<Name>Magikal House</Name>
+<DJ>DJ Zar</DJ>
+<Description> Entrevistas en directo con los mejores productores nacionales, recomendaciones exclusivas,  Promos, Novedades, y las mejores sesiones en directo, no te pierdas mgh, en exclusiva en Global House Radio.</Description>
+<Image>zar.png</Image>
+<Status></Status>
+</item>
+<item name="MagikalHouse2">
+<Name>Master Hot Mix Live</Name>
+<DJ>Master boogie</DJ>
+<Description> Top Ten Usa , los exitos mas bailados en Norte america de la mano de Master Dj Boogie, en directo desde Pensilvania, EE.UU. Lo mejor del House y comercial</Description>
+<Image>bugi.png</Image>
+<Status></Status>
+</item>
+<item name="ControlRoom">
+<Name>Control Room Radio Show</Name>
+<DJ>T.Tommy</DJ>
+<Description>Si te gustan las cantaditas, y el progresive house vocal, este es tu programa.cada semana, de la mano del gran T.Tommy</Description>
+<Image>tommy.png</Image>
+<Status></Status>
+</item>
+<item name="PleasureSound">
+<Name>Pleasure Sound Radio Show</Name>
+<DJ>Noe Morillas</DJ>
+<Description>Un Radio Show cuyo objetivo  principal es ofrecer al publico mas exigente una seleccion semanal elegante, exquisita y exclusiva dentro del amplio abanico que ofrece la musica House. Su slogan lo resume todo: "Bienvenidos a un mundo de sonidos hecho para disfrutar", todo ello desde la personal vision de su conductora Noe Morillas.</Description>
+<Image>noe.png</Image>
+<Status></Status>
+</item>
+<item name="Essential">
+<Name>Essential Radio Show</Name>
+<DJ>Dario Nunez</DJ>
+<Description>Dario nunez nos trae cada semana lo mejor d esu maleta con tracks exclusivos, promos y toda la esencia de uno de los productores con mas auge del momento.Te esperamos!</Description>
+<Image>dario.png</Image>
+<Status></Status>
+</item>
+<item name="IbizaSoundDeluxe">
+<Name>Ibiza Sound Deluxe</Name>
+<DJ>Jean Carles Ferrer</DJ>
+<Description>Ibiza Sound Deluxe,nos trae cada semana el repaso a lo  mas escuchado en la isla blanca, de la mando de Jean carles ferrer y Bilber, que nos acercarán puntualmenbte los hits del momento.</Description>
+<Image>jeancarles.png</Image>
+<Status>Rec</Status>
+</item>
+<item name="ZonaBeat">
+<Name>Zona Beat</Name>
+<DJ>Elioth Leguizamon</DJ>
+<Description>Desde la Capital Paraguaya, Asuncion, El Sonido House mas actual tiene nombre y apellido ZONA BEAT es la convinacion perfecta para pasar los Lunes de las Tardes Americanas en total Fiesta con ritmos exclusivamnete hechos para ti... </Description>
+<Image>zonabeat.png</Image>
+<Status></Status>
+</item>
+<item name="lovehouse">
+<Name>I love House</Name>
+<DJ>Luis De Frutos</DJ>
+<Description>Los sonidos mas frescos para comenzar con buen pie , el fin de semana, los encuentras aqui.Luis de Frutos, se encarga cada semana , de traerte los mas bailado en tu pista de baile habitual.</Description>
+<Image>lovehouse.png</Image>
+<Status></Status>
+</item>
+<item name="bambu">
+<Name>Bamboo Art Sound</Name>
+<DJ>Dani Daniel</DJ>
+<Description>Bamboo Art Sound es un proyecto que nace hace 2 años en Valencia bajo la dirección de Dani Dániel Dj y con la ayuda de Djs consagrados como Felipe Querol.120 minutos donde con cada disco sufre un subidón de adrenalina.</Description>
+<Image>bambu.png</Image>
+<Status></Status>
+</item>
+<item name="insesion">
+<Name>In Session</Name>
+<DJ>Global House Radio</DJ>
+<Description>En In Session, el protagonista eres tu ! Mandanos tu sesión no superior a 120 min y hazte sonar! Todas las semanas en tu emisora dance favorita, Global House Radio ! Para mas info, entra en nuestra zona de contacto o envianos la sesion a info@globalhouse.es </Description>
+<Image>insesion.png</Image>
+<Status></Status>
+</item>
+<item name="tnt">
+<Name>T.N.T</Name>
+<DJ>Dj Swarty</DJ>
+<Status></Status>
+
+<Description>
+TNT:Dinamita para tus oidos en Global House Radio !.Encontraras sonidos adictivos,melodicos y contundentes de la mano de Dj Swarthy ,sumergete en el climax de lo que deberia estar prohibido.Cada semana en tu estacion dance favorita, GLOBAL HOUSE RADIO !</Description>
+<Image>swarty.png</Image>
+
+</item>
+<item name="stateraul">
+<Name>STATE OF CLUB</Name>
+<DJ>Raul Moya</DJ>
+<Description>Sonidos frescos y dinámicos son algunos de los puntos fuertes que se pueden destacar en sus sesiones.Sonido tech house con mayusculas,es lo que sin duda vais a encontrar en el que es ya el referente del genero en la emisora.</Description>
+<Image>raulbak.png</Image>
+<Status></Status>
+</item>
+<item name="experienceradio">
+<Name>EXPERIENCE RADIO SHOW</Name>
+<DJ>Hector Valdés</DJ>
+<Description>Ritmos elegantes y mucha seridad, es sinonimo de experience radio show.El dj/locutor leonés, nos acerca cada semana toda la actualidad, de  una forma muy peculiar..</Description>
+<Image>hector.png</Image>
+<Status></Status>
+</item>
+<item name="denior">
+<Name>SUFFLE NIGHTS</Name>
+<DJ>Deniors</DJ>
+<Description>Aqui encontrareis la mejor musica dirty-electro del momento con deniorsDJ al mando. Disfrutareis de la musica de máxima calidad. Y gastareis las zapatillas de tanto bailar!!!</Description>
+<Image>denior.png</Image>
+<Status></Status>
+</item>
+<item name="crix">
+<Name>GALAXY MUSIC 2.0</Name>
+<DJ>Chris Martin</DJ>
+<Description>Disfruta De 2 Horitas Con El Mejor Sonido Tribal House!Promos,novedades y sorpresas os esperan aqui.No faltes !</Description>
+<Image>crix.png</Image>
+<Status></Status>
+</item>
+<item name="julen">
+<Name>The Cool Sounds</Name>
+<DJ>Dj Julen</DJ>
+<Description>120 minutos mezclados en directo con la música mas fresca del momento donde repasaremos las ultimas novedades</Description>
+<Image>julen.png</Image>
+<Status></Status>
+</item>
+<item name="tomyloa">
+<Name>In The Mix</Name>
+<DJ>Tommy Loa</DJ>
+<Description>Repasara todas las novedades y promos de la escena House del momento,en el programa de radio se reflejaran todas las vertientes del House,en especial el Tech-House, ya que esta entre los primeros en cuanto a sonido Club se refiere.</Description>
+<Image>loa.png</Image>
+<Status></Status>
+</item>
+<item name="peer">
+<Name>Barcelona In Sesion</Name>
+<DJ>Mr Peer</DJ>
+<Description>Hacer una petición en directo y dedicársela tu mismo a aquella persona que quieras y mucho mas en, Barcelona in SeSSion. Te lo vas a perder?? No dejes que te lo cuenten...</Description>
+<Image>peer.png</Image>
+<Status></Status>
+</item>
+<item name="otazo">
+<Name>Sounds From Ibiza</Name>
+<DJ>Juan Otazo and Martincool</DJ>
+<Description>Divertido radio show donde da a conocer toda la actualidad sobre la música dance.Programa lleno de humor, actualidad, entrevistas y como no, los pelotazos musicales del momento.Colaboran,Toni Bezares ,Josephine Sweett .</Description>
+<Image>otazo.png</Image>
+<Status></Status>
+</item>
+<item name="shake">
+<Name> SHAKE IT ! </Name>
+<DJ>Pau Traid</DJ>
+<Description>Bienvenido a Shake it, programa donde calentamos de bien duro los motores para la tarde de los martes. Entra ya, compártelo, interactua, globalizate y sobre todo Shake It! Con Pau Traid</Description>
+<Image>shake.png</Image>
+<Status></Status>
+</item>
+<item name="showroom">
+<Name>SHOW ROOM RADIO SHOW </Name>
+<DJ>Javi´d y Josep Arrom</DJ>
+<Description>Showroom es un programa especializado en House, tocando sutilmente todas las vertientes que marcan la Industria de Club actual, sin salirnos de un estilo propio.</Description>
+<Image>showroom.png</Image>
+<Status></Status>
+</item>
+<item name="rmx">
+<Name>RMX</Name>
+<DJ>Raúl Matín</DJ>
+<Description>Todas las semanas recibimos toda la potencia que rmx nos trae.Novedades y musicón son solo un aperitivo..Te apuntas?  </Description>
+<Image>rmx.png</Image>
+<Status></Status>
+</item>
+<item name="houselover">
+<Name>Houselover Radioshow</Name>
+<DJ>Dj Reginald</DJ>
+<Description>Houselover Radioshow, programa hecho para los amantes de la mejor música house y techno house, Dj Reginald nos presenta el sonido actual y contundente de la música de club cada semana en 60 minutos apasionantes ! </Description>
+<Image>reginald.png</Image>
+<Status></Status>
+</item>
+<item name="because">
+<Name>Because Now It’s When</Name>
+<DJ>Rubi Rodriguez</DJ>
+<Description>Because Now It’s When te ofrece las ultimas novedades de la musica House, pasando por diversos estilos Progressive, Electro, House….con su caracteristico potencial en los temas que te ofrece el dj y productor Rubi Rodriguez.  </Description>
+<Image>rubi.png</Image>
+<Status></Status>
+</item>
+<item name="temazo">
+<Name>Lets Go Temazo!</Name>
+<DJ>David Rubio , Luis Muñoz</DJ>
+<Description>Comenzamos la tarde carga de TEMAZOS , y es que david y luis nos tren el mejor repertorio de exitos y hist de tu pista de baile habitual para que disfrutes en dos horas con todo el ritmo que solo ellos saben transmitirte y es que aqui , solo vas a encontrar TEMAZOS !  </Description>
+<Image>temzo.png</Image>
+<Status></Status>
+</item>
+<item name="hits">
+<Name>Ruben Hits Live Mix</Name>
+<DJ>Rubén Bonilla</DJ>
+<Description>LOS HITS QUE MAS SUENAN ,LOS QUE MAS HAN SONADO,ABARCANDO VARIOS ESTILOS Y GENEROS DE LA MUSICA ELECTRONICA , TODO ESTO MEZCLADO EN VIVO. ENTRA , DISFRUTA DE LA MUSICA ,INTERACTUA EN EL CHAT Y LO MAS IMPORTANTE PASALO EN GRANDE………..¿DONDE? EN GLOBAL HOUSE RADIO   </Description>
+<Image>rubenhits.png</Image>
+<Status></Status>
+</item>
+<item name="canales">
+<Name>PARADISE</Name>
+<DJ>Rubén Canales</DJ>
+<Description>Bienvenido a Paradise!
+Dos horas de diversión donde vas a vibrar con la mejor musica y con aunténticos invitados de lujo; aun no conoces el paraiso?Descubrelo cada viernes de la mano de Rubén Canales. Entra en otra dimesión, entra en Paradise   </Description>
+<Image>canales.png</Image>
+<Status></Status>
+</item>
+<item name="label">
+<Name>SOUND HOUSE</Name>
+<DJ>Angel Label</DJ>
+<Description>Bienvenido a Paradise!
+Sound House , un programa diferente a otros , con 2 estilos de musica electronica , un programa donde encontraras con 2 horas de radio lo mejor del progressive-house y un toque de Trance. Angel Label te presentara lo mejor del House y Trance en su programa Sound House  </Description>
+<Image>label.png</Image>
+<Status></Status>
+</item>
+<item name="mella">
+<Name>I LOVE MUSIC</Name>
+<DJ>Mellaiyo Dj</DJ>
+<Description> Empieza la tarde con energia repasando lo mas actual en dos horas que te mantendran pegado a la silla ! </Description>
+<Image>mella.png</Image>
+<Status></Status>
+</item>
+<item name="diego">
+<Name>THE GARAGE OF HOUSE</Name>
+<DJ>JAMES D</DJ>
+<Description> Eventualmente abrimos las puertas de nuestro particular garaje para ofreceros esos sonidos frescos y dinamicos que os haran disfrutar de la tarde de una manera muy especial. </Description>
+<Image>diego.png</Image>
+<Status></Status>
+</item>
+<item name="sinner">
+<Name>MUSIC NON STOP</Name>
+<DJ>Sinner Dj</DJ>
+<Description> Dos horas frescas totalmente mezcladas en vivo donde nos acompaña un DJ invitado haciendolo un programa totalmente inesperado cada semana !</Description>
+<Image>sinner.png</Image>
+<Status></Status>
+</item>
+<item name="vivancos">
+<Name>FEEL THE SOUND</Name>
+<DJ>JOSE VIVANCOS</DJ>
+<Description>En feel the sound cada dia es una sorpresa.Jose Vivancos te acerca con mucho humor cada semana los sonidos mas frescos del momento.Atrevete a sentir el sonido !</Description>
+<Image>vivancos.png</Image>
+<Status></Status>
+</item>
+<item name="garrido">
+<Name>MAKING MUSIC</Name>
+<DJ>ADRI GARRIDO</DJ>
+<Description>
+Making Music es un programa de radio presentado por Adry Garrido donde se repasa la lista de los 20 exitos mas bailados del momento y las novedades mas importantes de cada semana.</Description>
+<Image>garrido.png</Image>
+<Status></Status>
+</item>
+<item name="fred">
+<Name>ALIVE RADIO SHOW</Name>
+<DJ>FRED SANCHEZ</DJ>
+<Description>
+Alive Radio Show ,  es un programa de radio presentado, y dirigido, por el joven DJ y productor español, Fred Sánchez, en el que tendrás la oportunidad de descubrir las últimas novedades, a nivel mundial, de la música electrónica, en la mayoría de sus vertientes</Description>
+<Image>fred.png</Image>
+<Status></Status>
+</item>
+<item name="william">
+<Name>SONIDOS URBANOS</Name>
+<DJ>WILLIAM GUZMAN</DJ>
+<Description>
+William Guzman una propuesta nueva con sus recopilatorio de sonidos actuales modernos basados en el tech house, tribal house y mucho house nos presenta una propuesta llena del mejor groove que se vive en las discos bogotanas.Sonidos nocturnos un programa para aquellos quienes buscan lo mejor de la música electrónica actual.</Description>
+<Image>william.png</Image>
+<Status></Status>
+</item>
+<item name="sito">
+<Name>LLEGO EL PACHANGEO</Name>
+<DJ>DJ SITO</DJ>
+<Social>programacion/sito.html</Social>
+<Description>
+Si lo tuyo es la pachanga y el latin, esta es tu hora y es que cada semana Sito, nos trae todo el frescor de los sonidos mas comerciales !!</Description>
+<Image>sito.png</Image>
+<Status></Status>
+</item>
+<item name="patricio">
+<Name>The New Electronic MusiC</Name>
+<DJ>DJ SAAB</DJ>
+<Description>
+Los sonidos mas exclusivos , promos y novedades nos esperan cada semana con dj saab, en 2 horas intensas donde podras encontrar lo mas acual del panorama electronico.</Description>
+<Image>patricio.png</Image>
+<Status></Status>
+</item>
+<item name="ramos">
+<Name>The Expansion</Name>
+<DJ>CARLOS RAMOS</DJ>
+<Description>
+Carlos Ramos presenta en exclusiva su nuevo proyecto llamado "THE EXPANSION", te atreves a vivir la experiencia musical más radical de la radio en 120 minutos? ¡Nos escuchamos! ¿Tu y yo quien si no?</Description>
+<Image>ramos.png</Image>
+<Status></Status>
+</item>
+<item name="mix">
+<Name>GLOBAL MIX</Name>
+<DJ>ALEX GOMEZ</DJ>
+<Description>
+Global MIx, producido y mezclado por Alex Gómez, es la fórmula que engloba la mejor música de Club y el mejor TechHouse mezclado con los principales Hits del Progressive House, ElectroHouse y House Comercial. Todos Miércoles entre las 16h y las 18h (hora menos en Canarias) el mejor sonido House en Global Mix, Global House Radio.</Description>
+<Image>gomez.png</Image>
+<Status></Status>
+</item>
+<item name="time">
+<Name>ITS YOUR TIME</Name>
+<DJ>ALBERTO FERNANDEZ</DJ>
+<Description>
+El radio show mas divertido del momento tiene su espacio en GLOBAL ! Cada dia, disfruta , interactua , baila y goza con nuestro presentador mas cachondo, Alberto Fernandez !!</Description>
+<Image>alberto.png</Image>
+<Status></Status>
+</item>
+<item name="polo">
+<Name>SWING GLOBAL</Name>
+<DJ>POLO MARTIN</DJ>
+<Description>
+Musicon para empezar la tarde de los sabados, repasando toda la actualidad en 120 minutos de autentico buen rollazo.Sin duda, te traemos todo el Swing !!!</Description>
+<Image>polo.png</Image>
+<Status></Status>
+</item>
+</Shows>
+</data>

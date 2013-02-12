@@ -14,9 +14,9 @@ setInterval(function(){view.actualize();},1000); // aqui cambiar el valor para l
 function Main(){
 
     this.mXML;
-    this.graphI;
-    this.actualP;
-    this.nextP;
+    this.graphI = new GraphInterface();
+    this.actualP = new Program();
+    this.nextP = new Program();
 
     this.init = function(){
         // lectura de datos
@@ -25,7 +25,7 @@ function Main(){
         this.actualize();
 
         // creacion de la interfaz grafica
-        this.graphI = new GraphInterface(this.actualP, this.nextP);
+        this.graphI.init(this.actualP, this.nextP);
         this.graphI.create();
     };
 
@@ -35,8 +35,8 @@ function Main(){
             this.actualP = this.mXML.programA;
             this.nextP = this.mXML.programN;
 
-            console.log("Programa actual: " + this.actualP.nameP);
-            console.log("Programa siguiente: " + this.nextP.nameP);
+            //console.log("Programa actual: " + this.actualP.nameP);
+            //console.log("Programa siguiente: " + this.nextP.nameP);
         }
     };
 
