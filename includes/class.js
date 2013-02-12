@@ -241,7 +241,11 @@ function GraphInterface(_actualP, _nextP){
     this.nextP = _nextP;
 
     this.create = function(){
-
+        var elemento=document.createElement('p');
+        var texto=document.createTextNode(this.actualP.nameP);
+        elemento.appendChild(texto);
+        var obj=document.getElementsByTagName('body')[0];
+        obj.appendChild(elemento);
     };
 
     this.remove = function(){
@@ -251,39 +255,6 @@ function GraphInterface(_actualP, _nextP){
     this.actualize = function(){
 
     };
-
-
-// 	function crearTabla() 
-// {
-//         var tr;
-//         var td;
-//         var tabla;
-//         var l=0;
-//         ev= CargarXMLEventos();
-//         auxUnEven=ev.pop();
-// 		tabla=document.getElementById("datos");
-//         while (auxUnEven!=undefined)
-//         {
-//             tr=tabla.insertRow(l);
-//             //creamos las columnas de la tabla 
-//             td=tr.insertCell(0);
-// 			td.innerHTML=auxUnEven.fecha;
-//             td=tr.insertCell(1);
-// 			td.innerHTML=auxUnEven.hora;
-//             td=tr.insertCell(2);
-// 			td.innerHTML=auxUnEven.comentario;           
-//             l++;
-//             auxUnEven=ev.pop();
-//         }
-//         if (l==0)
-//         {
-//             tabla=document.getElementById("datos");
-//             tr=tabla.insertRow(l);
-//             td=tr.insertCell(0);
-//             td.innerHTML=" No Hay Eventos ";
-//         }
-
-// }
 }
 
 

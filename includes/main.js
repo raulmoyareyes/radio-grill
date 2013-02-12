@@ -25,7 +25,8 @@ function Main(){
         this.actualize();
 
         // creacion de la interfaz grafica
-        this.graphI = GraphInterface(this.actualP, this.nextP);
+        this.graphI = new GraphInterface(this.actualP, this.nextP);
+        this.graphI.create();
     };
 
     this.actualize = function(){
