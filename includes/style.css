@@ -5,19 +5,55 @@ version: 1.0
 Developer: Raúl Moya (www.raul-ce.tk)
 *************************************************/
 
-div{
-    border: 1px solid red;
+body {
+    background: #333;
 }
 
 #divActual {
-    background: #999;
+    background: url(../extra/top.png);
+    background-repeat: no-repeat;
+    padding: 10px;
+    text-align: right;
+    width: 580px;
+}
+
+#divActual span {
+    font-weight: bold;
+    font-family: "Arial";
+    font-size: 20px;
+    margin-right: 30px;
+    text-align: center;
+    color: #FFF;
 }
 
 #divNext {
-    background: #999;
+    background: url(../extra/bottom.png);
+    background-repeat: no-repeat;
+    padding: 10px;
+    text-align: right;
+    width: 580px;
+}
+
+#divNext span {
+    font-weight: bold;
+    font-family: "Arial";
+    font-size: 20px;
+    margin-right: 30px;
+    text-align: center;
+    color: #FFF;
+}
+
+#divInfo {
+    height: 180px;
+    padding: 5px;
+    width: 580px;
 }
 
 #radio-grill{
-    border: 1px solid #333;
+    background: url(../extra/bg.png);
+    background-repeat: no-repeat;
+    height: 280px;
+    padding: 5px 7px;
+    width: 600px;
 }
 

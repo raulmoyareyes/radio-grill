@@ -40,6 +40,22 @@ function Program(){
         this.globalhouse = _globalhouse;
         this.descriptionP = _descriptionP;
     };
+    
+    this.copy = function(obj){
+        this.idP = obj.idP;
+        this.nameP = obj.nameP;
+        this.author = obj.author;
+        this.image = obj.image;
+        this.typeP = obj.typeP;
+        this.hourI = obj.hourI;
+        this.hourE = obj.hourE;
+        this.facebook = obj.facebook;
+        this.twitter = obj.twitter;
+        this.soundcloud = obj.soundcloud;
+        this.youtube = obj.youtube;
+        this.globalhouse = obj.globalhouse;
+        this.descriptionP = obj.descriptionP;
+    };
 
 }
 
@@ -252,8 +268,10 @@ function GraphInterface(){
         // crear la parte morada de arriba
         var name=document.createTextNode(this.actualP.nameP);
         var elemento=document.createElement('div');
+        var elementoS=document.createElement('span');
         elemento.id="divActual";
-        elemento.appendChild(name);
+        elementoS.appendChild(name);
+        elemento.appendChild(elementoS);
         obj.appendChild(elemento);
         
         
@@ -266,14 +284,21 @@ function GraphInterface(){
         // crear la parte morada de next
         var name2=document.createTextNode(this.nextP.nameP);
         var elemento2=document.createElement('div');
+        var elemento2S=document.createElement('span');
         elemento2.id="divNext";
-        elemento2.appendChild(name2);
+        elemento2S.appendChild(name2);
+        elemento2.appendChild(elemento2S);
         obj.appendChild(elemento2);
         
     };
     
     this.createVideo = function(){
-        
+        var reproductor = '<object width="300" height="180" id="lsplayer" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"><param name="movie" value="http://cdn.livestream.com/grid/LSPlayer.swf?channel=gstvs&amp;color=0xe7e7e7&amp;autoPlay=true&amp;mute=false&amp;iconColorOver=0x888888&amp;iconColor=0x777777"></param><param name="allowScriptAccess" value="always"></param><param name="allowFullScreen" value="true"></param><embed name="lsplayer" wmode="transparent" src="http://cdn.livestream.com/grid/LSPlayer.swf?channel=gstvs&amp;color=0xe7e7e7&amp;autoPlay=true&amp;mute=false&amp;iconColorOver=0x888888&amp;iconColor=0x777777" width="300" height="180" allowScriptAccess="always" allowFullScreen="true" type="application/x-shockwave-flash"></embed></object>';
+        var info = document.createElement('div');
+        info.id="divInfo";
+        info.innerHTML = reproductor;
+
+        document.getElementById('radio-grill').appendChild(info);
     };
     
     this.createAudio = function(){
@@ -286,24 +311,35 @@ function GraphInterface(){
         var elemento3=document.createElement('div');
         elemento3.appendChild(description);
         
-        var reproductor=document.createTextNode("reproductor audio");
+        var reproductor='<embed quality="high" flashvars="type=mp3&amp;file=http://67.212.179.138:7082/;stream.nsv&amp;autostart=true&amp;backcolor=0x#FFFFFF&amp;frontcolor=0x1D0051&amp;lightcolor=0x1D0051&amp;screencolor=0x1D0051" type="application/x-shockwave-flash" height="20" src="http://globalhouse.es/player.swf" id="streambaby" style="" width="250" name="streambaby">';
         var elemento4=document.createElement('div');
-        elemento4.appendChild(reproductor);
+        elemento4.innerHTML = reproductor;
         
         // crear el contenedor
-        var obj=document.getElementById('radio-grill');
+        var info = document.createElement('div');
+        info.id="divInfo";
         
-        obj.appendChild(elemento4);
-        obj.appendChild(elemento2);
-        obj.appendChild(elemento3);
+        info.appendChild(elemento4);
+        info.appendChild(elemento2);
+        info.appendChild(elemento3);
+        
+        document.getElementById('radio-grill').appendChild(info);
+
     };
 
     this.remove = function(){
-
+        var obj=document.getElementById('radio-grill');
+        
+        while(obj.hasChildNodes()){
+            obj.removeChild(obj.lastChild);
+        }
     };
 
-    this.actualize = function(){
-
+    this.actualize = function(_actualP, _nextP){
+        this.actualP = _actualP;
+        this.nextP = _nextP;
+        this.remove();
+        this.create();
     };
 }
 

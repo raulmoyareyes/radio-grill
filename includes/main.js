@@ -7,9 +7,7 @@ Developer: Raúl Moya (www.raul-ce.tk)
 
 var view = new Main();
 view.init();
-
-setInterval(function(){view.actualize();},1000); // aqui cambiar el valor para la repeticion
-
+setInterval(function(){view.actualize();},1000);
 
 function Main(){
 
@@ -22,21 +20,23 @@ function Main(){
         // lectura de datos
         this.mXML = new ManagerXML("programacion.xml");
         this.mXML.openFile();
-        this.actualize();
+        
+        this.actualP.copy(this.mXML.programA);
+        this.nextP.copy(this.mXML.programN);
 
         // creacion de la interfaz grafica
         this.graphI.init(this.actualP, this.nextP);
         this.graphI.create();
+        
     };
 
     this.actualize = function(){
-        this.mXML.loadPrograms(); // solo si el programa ha acabado
-        if(this.actualP !== this.mXML.programA){
-            this.actualP = this.mXML.programA;
-            this.nextP = this.mXML.programN;
 
-            //console.log("Programa actual: " + this.actualP.nameP);
-            //console.log("Programa siguiente: " + this.nextP.nameP);
+        this.mXML.loadPrograms(); // solo si el programa ha acabado
+        if(this.actualP.idP !== this.mXML.programA.idP){
+            this.actualP.copy(this.mXML.programA);
+            this.nextP.copy(this.mXML.programN);
+            this.graphI.actualize(this.actualP, this.nextP);
         }
     };
 
