@@ -6,10 +6,18 @@ Developer: Raúl Moya (www.raul-ce.tk)
 *************************************************/
 
 div{
-    border: 1px solid #333;
+    border: 1px solid red;
 }
 
-#content{
+#divActual {
+    background: #999;
+}
+
+#divNext {
+    background: #999;
+}
+
+#radio-grill{
     border: 1px solid #333;
 }
 

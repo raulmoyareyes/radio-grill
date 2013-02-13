@@ -241,15 +241,34 @@ function GraphInterface(){
     this.init = function(_actualP, _nextP){
         this.actualP = _actualP;
         this.nextP = _nextP;
+        
+        document.write('<link href="includes/style.css" rel="stylesheet" media="screen">');
     };
 
     this.create = function(){
+        
+        var obj=document.getElementById('radio-grill');
+        
+        // crear la parte morada de arriba
+        var name=document.createTextNode(this.actualP.nameP);
+        var elemento=document.createElement('div');
+        elemento.id="divActual";
+        elemento.appendChild(name);
+        obj.appendChild(elemento);
+        
         
         if(this.actualP.typeP === "audio"){
             this.createAudio();
         }else if(this.actualP.typeP === "video"){
             this.createVideo();
         }
+        
+        // crear la parte morada de next
+        var name2=document.createTextNode(this.nextP.nameP);
+        var elemento2=document.createElement('div');
+        elemento2.id="divNext";
+        elemento2.appendChild(name2);
+        obj.appendChild(elemento2);
         
     };
     
@@ -258,10 +277,7 @@ function GraphInterface(){
     };
     
     this.createAudio = function(){
-        var name=document.createTextNode(this.actualP.nameP);
-        var elemento=document.createElement('div');
-        elemento.appendChild(name);
-        
+                
         var present=document.createTextNode("Presenta: "+this.actualP.author+" ("+this.actualP.hourI+" "+this.actualP.hourE+")");
         var elemento2=document.createElement('div');
         elemento2.appendChild(present);
@@ -275,8 +291,8 @@ function GraphInterface(){
         elemento4.appendChild(reproductor);
         
         // crear el contenedor
-        var obj=document.getElementById('content');
-        obj.appendChild(elemento);
+        var obj=document.getElementById('radio-grill');
+        
         obj.appendChild(elemento4);
         obj.appendChild(elemento2);
         obj.appendChild(elemento3);
