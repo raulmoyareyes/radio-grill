@@ -57,3 +57,32 @@ body {
     width: 600px;
 }
 
+#repImg{
+    display: inline-block;
+    width: 288px;
+    text-align: center;
+    border: 1px solid #bbb;
+}
+
+#repImg img{
+    height: 150px;
+    max-width: 290px;
+}
+
+#autorInfo{
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 13px;
+    font-family: "Arial";
+    vertical-align: top;
+    width: 270px;
+}
+
+#divNetwork{
+    margin: 15px 0;
+}
+
+#present {
+    font-size: 15px;
+    font-weight: bold;
+}

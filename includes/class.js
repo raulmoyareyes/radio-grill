@@ -303,25 +303,48 @@ function GraphInterface(){
     
     this.createAudio = function(){
                 
-        var present=document.createTextNode("Presenta: "+this.actualP.author+" ("+this.actualP.hourI+" "+this.actualP.hourE+")");
+        var present=document.createTextNode("Presenta: "+this.actualP.author);
         var elemento2=document.createElement('div');
+        elemento2.id="present";
         elemento2.appendChild(present);
         
+        var hora=document.createTextNode(this.actualP.hourI+"-"+this.actualP.hourE+" horas");
+        var elemento7=document.createElement('div');
+        elemento7.appendChild(hora);
+        
+        
+        var elemento6=document.createElement('div');
+        elemento6.id="divNetwork";
+        
+        if(this.actualP.facebook !== "none"){var face=document.createElement("a"); face.href=this.actualP.facebook;var image=document.createElement('img'); image.src="extra/facebook.png"; face.appendChild(image); elemento6.appendChild(face);}
+        if(this.actualP.twitter !== "none"){var face=document.createElement("a"); face.href=this.actualP.twitter;var image=document.createElement('img'); image.src="extra/twitter.png"; face.appendChild(image); elemento6.appendChild(face);}
+        if(this.actualP.soundcloud !== "none"){var face=document.createElement("a"); face.href=this.actualP.soundcloud;var image=document.createElement('img'); image.src="extra/soundcloud.png"; face.appendChild(image); elemento6.appendChild(face);}
+
         var description=document.createTextNode("Info: "+this.actualP.descriptionP);
         var elemento3=document.createElement('div');
         elemento3.appendChild(description);
         
-        var reproductor='<embed quality="high" flashvars="type=mp3&amp;file=http://67.212.179.138:7082/;stream.nsv&amp;autostart=true&amp;backcolor=0x#FFFFFF&amp;frontcolor=0x1D0051&amp;lightcolor=0x1D0051&amp;screencolor=0x1D0051" type="application/x-shockwave-flash" height="20" src="http://globalhouse.es/player.swf" id="streambaby" style="" width="250" name="streambaby">';
+        var elemento5=document.createElement('div');
+        elemento5.id="autorInfo";
+        elemento5.appendChild(elemento2);
+        elemento5.appendChild(elemento7);
+        elemento5.appendChild(elemento6);
+        elemento5.appendChild(elemento3);
+        
+        var reproductor='<embed quality="high" flashvars="type=mp3&amp;file=http://67.212.179.138:7082/;stream.nsv&amp;autostart=true&amp;backcolor=0x#FFFFFF&amp;frontcolor=0x1D0051&amp;lightcolor=0x1D0051&amp;screencolor=0x1D0051" type="application/x-shockwave-flash" height="20" src="http://globalhouse.es/player.swf" id="streambaby" style="margin: 0;" width="285" name="streambaby">';
         var elemento4=document.createElement('div');
-        elemento4.innerHTML = reproductor;
+        elemento4.id="repImg";
+        var image=document.createElement('img');
+        image.src="images/"+this.actualP.image;
+        elemento4.appendChild(image);
+        elemento4.innerHTML = elemento4.innerHTML + reproductor;
         
         // crear el contenedor
         var info = document.createElement('div');
         info.id="divInfo";
         
-        info.appendChild(elemento4);
-        info.appendChild(elemento2);
-        info.appendChild(elemento3);
+        info.appendChild(elemento4); //imagen y reproductor
+        info.appendChild(elemento5); //autor redes info 
         
         document.getElementById('radio-grill').appendChild(info);
 

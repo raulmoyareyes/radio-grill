@@ -15,7 +15,7 @@
         <wednesday>
             <item hour="0000-2249">welove</item>
             <item hour="2249-2250">essence</item>
-            <item hour="2250-2359">welove</item>
+            <item hour="2250-2359">essence</item>
         </wednesday>
         <thursday>
             <item hour="0000-2359">essence</item>
@@ -45,9 +45,9 @@
         <essence>
             <name>Marok Essence</name>
             <author>Paul Marok Essence</author>
-            <image>essence.png</image>
-            <type>video</type>
-            <facebook>none</facebook>
+            <image>marok.png</image>
+            <type>audio</type>
+            <facebook>http://www.facebook.com/pablomoraleda</facebook>
             <twitter>none</twitter>
             <soundcloud>none</soundcloud>
             <youtube>none</youtube>
