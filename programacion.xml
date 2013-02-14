@@ -2,30 +2,34 @@
 <data>
     <week>
         <sunday>
-            <item hour="0000-1600">essence</item>
+            <item hour="0000-0000">essence</item>
         </sunday>
         <monday>
             <item hour="0000-1634">welove</item>
             <item hour="1650-1651">essence</item>
-            <item hour="1651-2359">welove</item>
+            <item hour="1651-0000">welove</item>
         </monday>
         <tuesday>
-            <item hour="0000-2359">essence</item>
+            <item hour="0000-0000">essence</item>
         </tuesday>
         <wednesday>
             <item hour="0000-2249">welove</item>
             <item hour="2249-2250">essence</item>
-            <item hour="2250-2359">essence</item>
+            <item hour="2250-0000">welove</item>
         </wednesday>
         <thursday>
-            <item hour="0000-2359">essence</item>
+            <item hour="0000-2249">essence</item>
+            <item hour="2249-2250">welove</item>
+            <item hour="2250-0000">essence</item>
         </thursday>
         <friday>
-            <item hour="0000-2359">welove</item>
+            <item hour="0000-2249">welove</item>
+            <item hour="2249-2250">essence</item>
+            <item hour="2250-0000">welove</item>
         </friday>
         <saturday>
             <item hour="0000-0128">essence</item>
-            <item hour="0128-2359">welove</item>
+            <item hour="0128-0000">welove</item>
         </saturday>
     </week>
 
@@ -35,8 +39,8 @@
             <author>Paul Marok</author>
             <image>welove.png</image>
             <type>audio</type>
-            <facebook>none</facebook>
-            <twitter>none</twitter>
+            <facebook>http://www.facebook.com/pablomoraleda</facebook>
+            <twitter>https://twitter.com/paulmarok</twitter>
             <soundcloud>none</soundcloud>
             <youtube>none</youtube>
             <globalhouse>none</globalhouse>

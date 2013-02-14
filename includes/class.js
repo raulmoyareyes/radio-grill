@@ -174,6 +174,8 @@ function ManagerXML(_fileXML){
                 var n = horaIE.split("-");
                 var horaI = n[0];
                 var horaE = n[1];
+                
+                if(horaE==="0000"){horaE="2400";}
 
                 if(horaI <= this.dateUTC.sHour && this.dateUTC.sHour < horaE){
 
@@ -188,7 +190,7 @@ function ManagerXML(_fileXML){
                         var _image = program2[0].childNodes[5].textContent;
                         var _typeP = program2[0].childNodes[7].textContent;
                         var _hourI = horaI;
-                        var _hourE = horaE;
+                        var _hourE = n[1];
                         var _facebook = program2[0].childNodes[9].textContent;
                         var _twitter = program2[0].childNodes[11].textContent;
                         var _soundcloud = program2[0].childNodes[13].textContent;
@@ -282,7 +284,7 @@ function GraphInterface(){
         }
         
         // crear la parte morada de next
-        var name2=document.createTextNode(this.nextP.nameP);
+        var name2=document.createTextNode(this.nextP.nameP+" ("+this.nextP.hourI+"-"+this.nextP.hourE+")");
         var elemento2=document.createElement('div');
         var elemento2S=document.createElement('span');
         elemento2.id="divNext";
@@ -293,7 +295,7 @@ function GraphInterface(){
     };
     
     this.createVideo = function(){
-        var reproductor = '<object width="300" height="180" id="lsplayer" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"><param name="movie" value="http://cdn.livestream.com/grid/LSPlayer.swf?channel=gstvs&amp;color=0xe7e7e7&amp;autoPlay=true&amp;mute=false&amp;iconColorOver=0x888888&amp;iconColor=0x777777"></param><param name="allowScriptAccess" value="always"></param><param name="allowFullScreen" value="true"></param><embed name="lsplayer" wmode="transparent" src="http://cdn.livestream.com/grid/LSPlayer.swf?channel=gstvs&amp;color=0xe7e7e7&amp;autoPlay=true&amp;mute=false&amp;iconColorOver=0x888888&amp;iconColor=0x777777" width="300" height="180" allowScriptAccess="always" allowFullScreen="true" type="application/x-shockwave-flash"></embed></object>';
+        var reproductor = '<object width="580" height="230" id="lsplayer" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"><param name="movie" value="http://cdn.livestream.com/grid/LSPlayer.swf?channel=gstvs&amp;color=0xe7e7e7&amp;autoPlay=true&amp;mute=false&amp;iconColorOver=0x888888&amp;iconColor=0x777777"></param><param name="allowScriptAccess" value="always"></param><param name="allowFullScreen" value="true"></param><embed name="lsplayer" wmode="transparent" src="http://cdn.livestream.com/grid/LSPlayer.swf?channel=gstvs&amp;color=0xe7e7e7&amp;autoPlay=true&amp;mute=false&amp;iconColorOver=0x888888&amp;iconColor=0x777777" width="580" height="230" allowScriptAccess="always" allowFullScreen="true" type="application/x-shockwave-flash"></embed></object>';
         var info = document.createElement('div');
         info.id="divInfo";
         info.innerHTML = reproductor;
@@ -308,13 +310,18 @@ function GraphInterface(){
         elemento2.id="present";
         elemento2.appendChild(present);
         
-        var hora=document.createTextNode(this.actualP.hourI+"-"+this.actualP.hourE+" horas");
+        var hora=document.createTextNode("Time show: "+this.actualP.hourI+"-"+this.actualP.hourE);
         var elemento7=document.createElement('div');
         elemento7.appendChild(hora);
         
         
         var elemento6=document.createElement('div');
         elemento6.id="divNetwork";
+        
+        var net=document.createTextNode("Síguelo en / Follow in");
+        var elemento8=document.createElement('div');
+        elemento8.appendChild(net);
+        elemento6.appendChild(elemento8);
         
         if(this.actualP.facebook !== "none"){var face=document.createElement("a"); face.href=this.actualP.facebook;var image=document.createElement('img'); image.src="extra/facebook.png"; face.appendChild(image); elemento6.appendChild(face);}
         if(this.actualP.twitter !== "none"){var face=document.createElement("a"); face.href=this.actualP.twitter;var image=document.createElement('img'); image.src="extra/twitter.png"; face.appendChild(image); elemento6.appendChild(face);}
@@ -331,7 +338,7 @@ function GraphInterface(){
         elemento5.appendChild(elemento6);
         elemento5.appendChild(elemento3);
         
-        var reproductor='<embed quality="high" flashvars="type=mp3&amp;file=http://67.212.179.138:7082/;stream.nsv&amp;autostart=true&amp;backcolor=0x#FFFFFF&amp;frontcolor=0x1D0051&amp;lightcolor=0x1D0051&amp;screencolor=0x1D0051" type="application/x-shockwave-flash" height="20" src="http://globalhouse.es/player.swf" id="streambaby" style="margin: 0;" width="285" name="streambaby">';
+        var reproductor='<embed quality="high" flashvars="type=mp3&amp;file=http://67.212.179.138:7082/;stream.nsv&amp;autostart=true&amp;backcolor=0x#FFFFFF&amp;frontcolor=0x1D0051&amp;lightcolor=0x1D0051&amp;screencolor=0x1D0051" type="application/x-shockwave-flash" height="20" src="http://globalhouse.es/player.swf" id="streambaby" style="margin: 0;" width="250" name="streambaby">';
         var elemento4=document.createElement('div');
         elemento4.id="repImg";
         var image=document.createElement('img');
