@@ -23,8 +23,8 @@
             <item hour="2250-0000">essence</item>
         </thursday>
         <friday>
-            <item hour="0000-2249">welove</item>
-            <item hour="2249-2250">essence</item>
+            <item hour="0000-1813">welove</item>
+            <item hour="1513-2250">essence</item>
             <item hour="2250-0000">welove</item>
         </friday>
         <saturday>
@@ -38,12 +38,15 @@
             <name>We Love</name>
             <author>Paul Marok</author>
             <image>welove.png</image>
-            <type>audio</type>
+            <type>video</type>
             <facebook>http://www.facebook.com/pablomoraleda</facebook>
             <twitter>https://twitter.com/paulmarok</twitter>
-            <soundcloud>none</soundcloud>
-            <youtube>none</youtube>
-            <globalhouse>none</globalhouse>
+            <soundcloud>https://twitter.com/paulmarok</soundcloud>
+            <youtube>https://twitter.com/paulmarok</youtube>
+            <web>https://twitter.com/paulmarok</web>
+            <blogger>https://twitter.com/paulmarok</blogger>
+            <mixcloud>https://twitter.com/paulmarok</mixcloud>
+            <myspace>https://twitter.com/paulmarok</myspace>
             <description>Descripcion del programa de We Love con Paul Marok</description>
         </welove>
         <essence>
@@ -52,10 +55,13 @@
             <image>marok.png</image>
             <type>audio</type>
             <facebook>http://www.facebook.com/pablomoraleda</facebook>
-            <twitter>none</twitter>
-            <soundcloud>none</soundcloud>
-            <youtube>none</youtube>
-            <globalhouse>none</globalhouse>
+            <twitter>https://twitter.com/paulmarok</twitter>
+            <soundcloud>https://twitter.com/paulmarok</soundcloud>
+            <youtube>https://twitter.com/paulmarok</youtube>
+            <web>https://twitter.com/paulmarok</web>
+            <blogger>https://twitter.com/paulmarok</blogger>
+            <mixcloud>https://twitter.com/paulmarok</mixcloud>
+            <myspace>https://twitter.com/paulmarok</myspace>
             <description>Descripcion del programa de Marok Essence con Paul Marok Essence</description>
         </essence>
     </programs>

@@ -22,10 +22,13 @@ function Program(){
     this.twitter;
     this.soundcloud;
     this.youtube;
-    this.globalhouse;
+    this.web;
+    this.blogger;
+    this.mixcloud;
+    this.myspace;
     this.descriptionP;
 
-    this.programDates = function(_idP, _nameP, _author, _image, _typeP, _hourI, _hourE, _facebook, _twitter, _soundcloud, _youtube, _globalhouse, _descriptionP){
+    this.programDates = function(_idP, _nameP, _author, _image, _typeP, _hourI, _hourE, _facebook, _twitter, _soundcloud, _youtube, _web, _blogger, _mixcloud, _myspace, _descriptionP){
         this.idP = _idP;
         this.nameP = _nameP;
         this.author = _author;
@@ -37,7 +40,10 @@ function Program(){
         this.twitter = _twitter;
         this.soundcloud = _soundcloud;
         this.youtube = _youtube;
-        this.globalhouse = _globalhouse;
+        this.web = _web;
+        this.blogger = _blogger;
+        this.mixcloud = _mixcloud;
+        this.myspace = _myspace;
         this.descriptionP = _descriptionP;
     };
     
@@ -53,7 +59,10 @@ function Program(){
         this.twitter = obj.twitter;
         this.soundcloud = obj.soundcloud;
         this.youtube = obj.youtube;
-        this.globalhouse = obj.globalhouse;
+        this.web = obj.web;
+        this.blogger = obj.blogger;
+        this.mixcloud = obj.mixcloud;
+        this.myspace = obj.myspace;
         this.descriptionP = obj.descriptionP;
     };
 
@@ -195,9 +204,12 @@ function ManagerXML(_fileXML){
                         var _twitter = program2[0].childNodes[11].textContent;
                         var _soundcloud = program2[0].childNodes[13].textContent;
                         var _youtube = program2[0].childNodes[15].textContent;
-                        var _globalhouse = program2[0].childNodes[17].textContent;
-                        var _descriptionP = program2[0].childNodes[19].textContent;
-                        this.programA.programDates(_idP, _nameP, _author, _image, _typeP, _hourI, _hourE, _facebook, _twitter, _soundcloud, _youtube, _globalhouse, _descriptionP);
+                        var _web = program2[0].childNodes[17].textContent;
+                        var _blogger = program2[0].childNodes[19].textContent;
+                        var _mixcloud = program2[0].childNodes[21].textContent;
+                        var _myspace = program2[0].childNodes[23].textContent;
+                        var _descriptionP = program2[0].childNodes[25].textContent;
+                        this.programA.programDates(_idP, _nameP, _author, _image, _typeP, _hourI, _hourE, _facebook, _twitter, _soundcloud, _youtube, _web, _blogger, _mixcloud, _myspace, _descriptionP);
 
                         if( (i+1)*2+1 < today.length ){
                             var program2 = this.programs.getElementsByTagName(today[(i+1)*2+1].textContent);
@@ -228,10 +240,13 @@ function ManagerXML(_fileXML){
                         _twitter = program2[0].childNodes[11].textContent;
                         _soundcloud = program2[0].childNodes[13].textContent;
                         _youtube = program2[0].childNodes[15].textContent;
-                        _globalhouse = program2[0].childNodes[17].textContent;
-                        _descriptionP = program2[0].childNodes[19].textContent;
+                        _web = program2[0].childNodes[17].textContent;
+                        _blogger = program2[0].childNodes[19].textContent;
+                        _mixcloud = program2[0].childNodes[21].textContent;
+                        _myspace = program2[0].childNodes[23].textContent;
+                        _descriptionP = program2[0].childNodes[25].textContent;
                         
-                        this.programN.programDates(_idP, _nameP, _author, _image, _typeP, _hourI, _hourE, _facebook, _twitter, _soundcloud, _youtube, _globalhouse, _descriptionP);
+                        this.programN.programDates(_idP, _nameP, _author, _image, _typeP, _hourI, _hourE, _facebook, _twitter, _soundcloud, _youtube, _web, _blogger, _mixcloud, _myspace, _descriptionP);
                     }
 
 
@@ -284,7 +299,7 @@ function GraphInterface(){
         }
         
         // crear la parte morada de next
-        var name2=document.createTextNode(this.nextP.nameP+" ("+this.nextP.hourI+"-"+this.nextP.hourE+")");
+        var name2=document.createTextNode(this.nextP.nameP+" ("+this.nextP.hourI.substring(0,2)+":"+this.nextP.hourI.substring(2,4)+"-"+this.nextP.hourE.substring(0,2)+":"+this.nextP.hourE.substring(2,4)+")");
         var elemento2=document.createElement('div');
         var elemento2S=document.createElement('span');
         elemento2.id="divNext";
@@ -295,11 +310,56 @@ function GraphInterface(){
     };
     
     this.createVideo = function(){
-        var reproductor = '<object width="580" height="230" id="lsplayer" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"><param name="movie" value="http://cdn.livestream.com/grid/LSPlayer.swf?channel=gstvs&amp;color=0xe7e7e7&amp;autoPlay=true&amp;mute=false&amp;iconColorOver=0x888888&amp;iconColor=0x777777"></param><param name="allowScriptAccess" value="always"></param><param name="allowFullScreen" value="true"></param><embed name="lsplayer" wmode="transparent" src="http://cdn.livestream.com/grid/LSPlayer.swf?channel=gstvs&amp;color=0xe7e7e7&amp;autoPlay=true&amp;mute=false&amp;iconColorOver=0x888888&amp;iconColor=0x777777" width="580" height="230" allowScriptAccess="always" allowFullScreen="true" type="application/x-shockwave-flash"></embed></object>';
+        var present=document.createTextNode("Presenta: "+this.actualP.author);
+        var elemento2=document.createElement('div');
+        elemento2.id="present";
+        elemento2.appendChild(present);
+        
+        var hora=document.createTextNode("Time show: "+this.actualP.hourI.substring(0,2)+":"+this.actualP.hourI.substring(2,4)+"-"+this.actualP.hourE.substring(0,2)+":"+this.actualP.hourE.substring(2,4));
+        var elemento7=document.createElement('div');
+        elemento7.appendChild(hora);
+        
+        
+        var elemento6=document.createElement('div');
+        elemento6.id="divNetwork";
+        
+        var net=document.createTextNode("SIGUELO EN / FOLLOW IN");
+        var elemento8=document.createElement('div');
+        elemento8.appendChild(net);
+        elemento6.appendChild(elemento8);
+        
+        if(this.actualP.facebook !== "none"){var face=document.createElement("a"); face.href=this.actualP.facebook;var image=document.createElement('img'); image.src="extra/facebook.png"; face.appendChild(image); elemento6.appendChild(face);}
+        if(this.actualP.twitter !== "none"){var face=document.createElement("a"); face.href=this.actualP.twitter;var image=document.createElement('img'); image.src="extra/twitter.png"; face.appendChild(image); elemento6.appendChild(face);}
+        if(this.actualP.soundcloud !== "none"){var face=document.createElement("a"); face.href=this.actualP.soundcloud;var image=document.createElement('img'); image.src="extra/soundcloud.png"; face.appendChild(image); elemento6.appendChild(face);}
+        if(this.actualP.youtube !== "none"){var face=document.createElement("a"); face.href=this.actualP.youtube;var image=document.createElement('img'); image.src="extra/youtube.png"; face.appendChild(image); elemento6.appendChild(face);}
+        if(this.actualP.blogger !== "none"){var face=document.createElement("a"); face.href=this.actualP.blogger;var image=document.createElement('img'); image.src="extra/blogger.png"; face.appendChild(image); elemento6.appendChild(face);}
+        if(this.actualP.mixcloud !== "none"){var face=document.createElement("a"); face.href=this.actualP.mixcloud;var image=document.createElement('img'); image.src="extra/mixcloud.png"; face.appendChild(image); elemento6.appendChild(face);}
+        if(this.actualP.myspace !== "none"){var face=document.createElement("a"); face.href=this.actualP.myspace;var image=document.createElement('img'); image.src="extra/myspace.png"; face.appendChild(image); elemento6.appendChild(face);}
+        if(this.actualP.web !== "none"){var face=document.createElement("a"); face.href=this.actualP.web;var image=document.createElement('img'); image.src="extra/web.png"; face.appendChild(image); elemento6.appendChild(face);}
+
+        var description=document.createTextNode("Info: "+this.actualP.descriptionP);
+        var elemento3=document.createElement('div');
+        elemento3.appendChild(description);
+        
+        var elemento5=document.createElement('div');
+        elemento5.id="autorInfovideo";
+        elemento5.appendChild(elemento2);
+        elemento5.appendChild(elemento7);
+        elemento5.appendChild(elemento6);
+        elemento5.appendChild(elemento3);
+        
+        var reproductor = '<object width="300" height="230" id="lsplayer" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"><param name="movie" value="http://cdn.livestream.com/grid/LSPlayer.swf?channel=gstvs&amp;color=0xe7e7e7&amp;autoPlay=true&amp;mute=false&amp;iconColorOver=0x888888&amp;iconColor=0x777777"></param><param name="allowScriptAccess" value="always"></param><param name="allowFullScreen" value="true"></param><embed name="lsplayer" wmode="transparent" src="http://cdn.livestream.com/grid/LSPlayer.swf?channel=gstvs&amp;color=0xe7e7e7&amp;autoPlay=true&amp;mute=false&amp;iconColorOver=0x888888&amp;iconColor=0x777777" width="300" height="230" allowScriptAccess="always" allowFullScreen="true" type="application/x-shockwave-flash"></embed></object>';
+        var elemento4=document.createElement('div');
+        elemento4.id="divVideo";
+        elemento4.innerHTML = reproductor;
+
+        // crear el contenedor
         var info = document.createElement('div');
         info.id="divInfo";
-        info.innerHTML = reproductor;
-
+        
+        info.appendChild(elemento4); //imagen y reproductor
+        info.appendChild(elemento5); //autor redes info 
+        
         document.getElementById('radio-grill').appendChild(info);
     };
     
@@ -310,7 +370,7 @@ function GraphInterface(){
         elemento2.id="present";
         elemento2.appendChild(present);
         
-        var hora=document.createTextNode("Time show: "+this.actualP.hourI+"-"+this.actualP.hourE);
+        var hora=document.createTextNode("Time show: "+this.actualP.hourI.substring(0,2)+":"+this.actualP.hourI.substring(2,4)+"-"+this.actualP.hourE.substring(0,2)+":"+this.actualP.hourE.substring(2,4));
         var elemento7=document.createElement('div');
         elemento7.appendChild(hora);
         
@@ -318,7 +378,7 @@ function GraphInterface(){
         var elemento6=document.createElement('div');
         elemento6.id="divNetwork";
         
-        var net=document.createTextNode("Síguelo en / Follow in");
+        var net=document.createTextNode("SIGUELO EN / FOLLOW IN");
         var elemento8=document.createElement('div');
         elemento8.appendChild(net);
         elemento6.appendChild(elemento8);
@@ -326,6 +386,11 @@ function GraphInterface(){
         if(this.actualP.facebook !== "none"){var face=document.createElement("a"); face.href=this.actualP.facebook;var image=document.createElement('img'); image.src="extra/facebook.png"; face.appendChild(image); elemento6.appendChild(face);}
         if(this.actualP.twitter !== "none"){var face=document.createElement("a"); face.href=this.actualP.twitter;var image=document.createElement('img'); image.src="extra/twitter.png"; face.appendChild(image); elemento6.appendChild(face);}
         if(this.actualP.soundcloud !== "none"){var face=document.createElement("a"); face.href=this.actualP.soundcloud;var image=document.createElement('img'); image.src="extra/soundcloud.png"; face.appendChild(image); elemento6.appendChild(face);}
+        if(this.actualP.youtube !== "none"){var face=document.createElement("a"); face.href=this.actualP.youtube;var image=document.createElement('img'); image.src="extra/youtube.png"; face.appendChild(image); elemento6.appendChild(face);}
+        if(this.actualP.blogger !== "none"){var face=document.createElement("a"); face.href=this.actualP.blogger;var image=document.createElement('img'); image.src="extra/blogger.png"; face.appendChild(image); elemento6.appendChild(face);}
+        if(this.actualP.mixcloud !== "none"){var face=document.createElement("a"); face.href=this.actualP.mixcloud;var image=document.createElement('img'); image.src="extra/mixcloud.png"; face.appendChild(image); elemento6.appendChild(face);}
+        if(this.actualP.myspace !== "none"){var face=document.createElement("a"); face.href=this.actualP.myspace;var image=document.createElement('img'); image.src="extra/myspace.png"; face.appendChild(image); elemento6.appendChild(face);}
+        if(this.actualP.web !== "none"){var face=document.createElement("a"); face.href=this.actualP.web;var image=document.createElement('img'); image.src="extra/web.png"; face.appendChild(image); elemento6.appendChild(face);}
 
         var description=document.createTextNode("Info: "+this.actualP.descriptionP);
         var elemento3=document.createElement('div');
