@@ -406,7 +406,7 @@ function GraphInterface(){
         var elemento4=document.createElement('div');
         elemento4.id="repImg";
         var image=document.createElement('img');
-        image.src="images/"+this.actualP.image;
+        image.src="radio-grill/images/"+this.actualP.image;
         elemento4.appendChild(image);
         elemento4.innerHTML = elemento4.innerHTML + reproductor;
         
