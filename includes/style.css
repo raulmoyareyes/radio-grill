@@ -1,13 +1,9 @@
-
 /***********************************************
 Radio Grill Project
 version: 1.0
 Developer: Raúl Moya (www.raul-ce.tk)
 *************************************************/
 
-body {
-    background: #333;
-}
 
 #divActual {
     background: url(../extra/top.png);
