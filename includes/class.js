@@ -1,4 +1,3 @@
-
 /***********************************************
 Radio Grill Project
 version: 1.0
@@ -391,7 +390,7 @@ function GraphInterface(){
         this.actualP = _actualP;
         this.nextP = _nextP;
         
-        document.write('<link href="includes/style.css" rel="stylesheet" media="screen">');
+        document.write('<link href="radio-grill/includes/style.css" rel="stylesheet" media="screen">');
     };
 
     this.create = function(){
@@ -444,14 +443,14 @@ function GraphInterface(){
         elemento8.appendChild(net);
         elemento6.appendChild(elemento8);
         
-        if(this.actualP.facebook !== "none"){var face=document.createElement("a"); face.href=this.actualP.facebook;var image=document.createElement('img'); image.src="extra/facebook.png"; face.appendChild(image); elemento6.appendChild(face);}
-        if(this.actualP.twitter !== "none"){var face=document.createElement("a"); face.href=this.actualP.twitter;var image=document.createElement('img'); image.src="extra/twitter.png"; face.appendChild(image); elemento6.appendChild(face);}
-        if(this.actualP.soundcloud !== "none"){var face=document.createElement("a"); face.href=this.actualP.soundcloud;var image=document.createElement('img'); image.src="extra/soundcloud.png"; face.appendChild(image); elemento6.appendChild(face);}
-        if(this.actualP.youtube !== "none"){var face=document.createElement("a"); face.href=this.actualP.youtube;var image=document.createElement('img'); image.src="extra/youtube.png"; face.appendChild(image); elemento6.appendChild(face);}
-        if(this.actualP.blogger !== "none"){var face=document.createElement("a"); face.href=this.actualP.blogger;var image=document.createElement('img'); image.src="extra/blogger.png"; face.appendChild(image); elemento6.appendChild(face);}
-        if(this.actualP.mixcloud !== "none"){var face=document.createElement("a"); face.href=this.actualP.mixcloud;var image=document.createElement('img'); image.src="extra/mixcloud.png"; face.appendChild(image); elemento6.appendChild(face);}
-        if(this.actualP.myspace !== "none"){var face=document.createElement("a"); face.href=this.actualP.myspace;var image=document.createElement('img'); image.src="extra/myspace.png"; face.appendChild(image); elemento6.appendChild(face);}
-        if(this.actualP.web !== "none"){var face=document.createElement("a"); face.href=this.actualP.web;var image=document.createElement('img'); image.src="extra/web.png"; face.appendChild(image); elemento6.appendChild(face);}
+        if(this.actualP.facebook !== "none"){var face=document.createElement("a"); face.href=this.actualP.facebook;var image=document.createElement('img'); image.src="radio-grill/extra/facebook.png"; face.appendChild(image); elemento6.appendChild(face);}
+        if(this.actualP.twitter !== "none"){var face=document.createElement("a"); face.href=this.actualP.twitter;var image=document.createElement('img'); image.src="radio-grill/extra/twitter.png"; face.appendChild(image); elemento6.appendChild(face);}
+        if(this.actualP.soundcloud !== "none"){var face=document.createElement("a"); face.href=this.actualP.soundcloud;var image=document.createElement('img'); image.src="radio-grill/extra/soundcloud.png"; face.appendChild(image); elemento6.appendChild(face);}
+        if(this.actualP.youtube !== "none"){var face=document.createElement("a"); face.href=this.actualP.youtube;var image=document.createElement('img'); image.src="radio-grill/extra/youtube.png"; face.appendChild(image); elemento6.appendChild(face);}
+        if(this.actualP.blogger !== "none"){var face=document.createElement("a"); face.href=this.actualP.blogger;var image=document.createElement('img'); image.src="radio-grill/extra/blogger.png"; face.appendChild(image); elemento6.appendChild(face);}
+        if(this.actualP.mixcloud !== "none"){var face=document.createElement("a"); face.href=this.actualP.mixcloud;var image=document.createElement('img'); image.src="radio-grill/extra/mixcloud.png"; face.appendChild(image); elemento6.appendChild(face);}
+        if(this.actualP.myspace !== "none"){var face=document.createElement("a"); face.href=this.actualP.myspace;var image=document.createElement('img'); image.src="radio-grill/extra/myspace.png"; face.appendChild(image); elemento6.appendChild(face);}
+        if(this.actualP.web !== "none"){var face=document.createElement("a"); face.href=this.actualP.web;var image=document.createElement('img'); image.src="radio-grill/extra/web.png"; face.appendChild(image); elemento6.appendChild(face);}
 
         var description=document.createTextNode("Info: "+this.actualP.descriptionP);
         var elemento3=document.createElement('div');
@@ -499,14 +498,14 @@ function GraphInterface(){
         elemento8.appendChild(net);
         elemento6.appendChild(elemento8);
         
-        if(this.actualP.facebook !== "none"){var face=document.createElement("a"); face.href=this.actualP.facebook;var image=document.createElement('img'); image.src="extra/facebook.png"; face.appendChild(image); elemento6.appendChild(face);}
-        if(this.actualP.twitter !== "none"){var face=document.createElement("a"); face.href=this.actualP.twitter;var image=document.createElement('img'); image.src="extra/twitter.png"; face.appendChild(image); elemento6.appendChild(face);}
-        if(this.actualP.soundcloud !== "none"){var face=document.createElement("a"); face.href=this.actualP.soundcloud;var image=document.createElement('img'); image.src="extra/soundcloud.png"; face.appendChild(image); elemento6.appendChild(face);}
-        if(this.actualP.youtube !== "none"){var face=document.createElement("a"); face.href=this.actualP.youtube;var image=document.createElement('img'); image.src="extra/youtube.png"; face.appendChild(image); elemento6.appendChild(face);}
-        if(this.actualP.blogger !== "none"){var face=document.createElement("a"); face.href=this.actualP.blogger;var image=document.createElement('img'); image.src="extra/blogger.png"; face.appendChild(image); elemento6.appendChild(face);}
-        if(this.actualP.mixcloud !== "none"){var face=document.createElement("a"); face.href=this.actualP.mixcloud;var image=document.createElement('img'); image.src="extra/mixcloud.png"; face.appendChild(image); elemento6.appendChild(face);}
-        if(this.actualP.myspace !== "none"){var face=document.createElement("a"); face.href=this.actualP.myspace;var image=document.createElement('img'); image.src="extra/myspace.png"; face.appendChild(image); elemento6.appendChild(face);}
-        if(this.actualP.web !== "none"){var face=document.createElement("a"); face.href=this.actualP.web;var image=document.createElement('img'); image.src="extra/web.png"; face.appendChild(image); elemento6.appendChild(face);}
+        if(this.actualP.facebook !== "none"){var face=document.createElement("a"); face.href=this.actualP.facebook;var image=document.createElement('img'); image.src="radio-grill/extra/facebook.png"; face.appendChild(image); elemento6.appendChild(face);}
+        if(this.actualP.twitter !== "none"){var face=document.createElement("a"); face.href=this.actualP.twitter;var image=document.createElement('img'); image.src="radio-grill/extra/twitter.png"; face.appendChild(image); elemento6.appendChild(face);}
+        if(this.actualP.soundcloud !== "none"){var face=document.createElement("a"); face.href=this.actualP.soundcloud;var image=document.createElement('img'); image.src="radio-grill/extra/soundcloud.png"; face.appendChild(image); elemento6.appendChild(face);}
+        if(this.actualP.youtube !== "none"){var face=document.createElement("a"); face.href=this.actualP.youtube;var image=document.createElement('img'); image.src="radio-grill/extra/youtube.png"; face.appendChild(image); elemento6.appendChild(face);}
+        if(this.actualP.blogger !== "none"){var face=document.createElement("a"); face.href=this.actualP.blogger;var image=document.createElement('img'); image.src="radio-grill/extra/blogger.png"; face.appendChild(image); elemento6.appendChild(face);}
+        if(this.actualP.mixcloud !== "none"){var face=document.createElement("a"); face.href=this.actualP.mixcloud;var image=document.createElement('img'); image.src="radio-grill/extra/mixcloud.png"; face.appendChild(image); elemento6.appendChild(face);}
+        if(this.actualP.myspace !== "none"){var face=document.createElement("a"); face.href=this.actualP.myspace;var image=document.createElement('img'); image.src="radio-grill/extra/myspace.png"; face.appendChild(image); elemento6.appendChild(face);}
+        if(this.actualP.web !== "none"){var face=document.createElement("a"); face.href=this.actualP.web;var image=document.createElement('img'); image.src="radio-grill/extra/web.png"; face.appendChild(image); elemento6.appendChild(face);}
 
         var description=document.createTextNode("Info: "+this.actualP.descriptionP);
         var elemento3=document.createElement('div');
@@ -523,7 +522,7 @@ function GraphInterface(){
         var elemento4=document.createElement('div');
         elemento4.id="repImg";
         var image=document.createElement('img');
-        image.src="images/"+this.actualP.image;
+        image.src="radio-grill/images/"+this.actualP.image;
         elemento4.appendChild(image);
         elemento4.innerHTML = elemento4.innerHTML + reproductor;
         

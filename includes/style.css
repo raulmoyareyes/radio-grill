@@ -1,13 +1,9 @@
-
 /***********************************************
 Radio Grill Project
 version: 1.0
 Developer: Raúl Moya (www.raul-ce.tk)
 *************************************************/
 
-body {
-    background: #333;
-}
 
 img {
     border: 0px;
@@ -111,4 +107,5 @@ img {
 
 #present {
     font-size: 15px;
+    margin: 10px 0;
 }

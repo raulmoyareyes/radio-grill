@@ -1,4 +1,3 @@
-
 /*************************************************
 Radio Grill Project
 version: 1.0
@@ -18,7 +17,7 @@ function Main(){
 
     this.init = function(){
         // lectura de datos
-        this.mXML = new ManagerXML("programacion.xml");
+        this.mXML = new ManagerXML("radio-grill/programacion.xml");
         this.mXML.openFile();
         
         this.actualP.copy(this.mXML.programA);
