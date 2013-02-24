@@ -9,6 +9,10 @@ body {
     background: #333;
 }
 
+img {
+    border: 0px;
+}
+
 #divActual {
     background: url(../extra/top.png);
     background-repeat: no-repeat;

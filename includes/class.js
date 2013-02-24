@@ -199,8 +199,67 @@ function ManagerXML(_fileXML){
                 if(horaE==="0000"){horaE="2400";}
 
                 if(horaI <= this.dateUTC.sHour && this.dateUTC.sHour < horaE){
-                    console.log(horaI);
-                    console.log(horaE);
+//                    console.log(horaI);
+//                    console.log(horaE);
+                    if(this.programA.idP !== today[i].childNodes[0].nodeValue) {
+                        var program2 = this.programs.getElementsByTagName(today[i].childNodes[0].nodeValue);
+
+                        var _idP = today[i].childNodes[0].nodeValue;
+                        var _nameP = program2[0].childNodes[0].childNodes[0].nodeValue;
+                        var _author = program2[0].childNodes[1].childNodes[0].nodeValue;
+                        var _image = program2[0].childNodes[2].childNodes[0].nodeValue;
+                        var _typeP = program2[0].childNodes[3].childNodes[0].nodeValue;
+                        var _hourI = horaI;
+                        var _hourE = n[1];
+                        var _facebook = program2[0].childNodes[4].childNodes[0].nodeValue;
+                        var _twitter = program2[0].childNodes[5].childNodes[0].nodeValue;
+                        var _soundcloud = program2[0].childNodes[6].childNodes[0].nodeValue;
+                        var _youtube = program2[0].childNodes[7].childNodes[0].nodeValue;
+                        var _web = program2[0].childNodes[8].childNodes[0].nodeValue;
+                        var _blogger = program2[0].childNodes[9].childNodes[0].nodeValue;
+                        var _mixcloud = program2[0].childNodes[10].childNodes[0].nodeValue;
+                        var _myspace = program2[0].childNodes[11].childNodes[0].nodeValue;
+                        var _descriptionP = program2[0].childNodes[12].childNodes[0].nodeValue;
+                        this.programA.programDates(_idP, _nameP, _author, _image, _typeP, _hourI, _hourE, _facebook, _twitter, _soundcloud, _youtube, _web, _blogger, _mixcloud, _myspace, _descriptionP);
+
+                        if( (i+1) < today.length ){
+                            var program2 = this.programs.getElementsByTagName(today[(i+1)].childNodes[0].nodeValue);
+
+                            _idP = today[(i+1)].childNodes[0].nodeValue;;
+                            horaIE = today[(i+1)].attributes[0].nodeValue;
+                            n = horaIE.split("-");
+                            horaI = n[0];
+                            horaE = n[1];
+                                                       
+                        } else {
+                            var program2 = this.programs.getElementsByTagName(tomorrow[1].childNodes[0].nodeValue);
+
+                            _idP = tomorrow[1].childNodes[0].nodeValue;
+                            horaIE = tomorrow[1].attributes[0].nodeValue;
+                            n = horaIE.split("-");
+                            horaI = n[0];
+                            horaE = n[1];
+                            
+                        }
+                        _nameP = program2[0].childNodes[0].childNodes[0].nodeValue;
+                        _author = program2[0].childNodes[1].childNodes[0].nodeValue;
+                        _image = program2[0].childNodes[2].childNodes[0].nodeValue;
+                        _typeP = program2[0].childNodes[3].childNodes[0].nodeValue;
+                        _hourI = horaI;
+                        _hourE = horaE;
+                        _facebook = program2[0].childNodes[4].childNodes[0].nodeValue;
+                        _twitter = program2[0].childNodes[5].childNodes[0].nodeValue;
+                        _soundcloud = program2[0].childNodes[6].childNodes[0].nodeValue;
+                        _youtube = program2[0].childNodes[7].childNodes[0].nodeValue;
+                        _web = program2[0].childNodes[8].childNodes[0].nodeValue;
+                        _blogger = program2[0].childNodes[9].childNodes[0].nodeValue;
+                        _mixcloud = program2[0].childNodes[10].childNodes[0].nodeValue;
+                        _myspace = program2[0].childNodes[11].childNodes[0].nodeValue;
+                        _descriptionP = program2[0].childNodes[12].childNodes[0].nodeValue;
+                        
+                        this.programN.programDates(_idP, _nameP, _author, _image, _typeP, _hourI, _hourE, _facebook, _twitter, _soundcloud, _youtube, _web, _blogger, _mixcloud, _myspace, _descriptionP);
+
+                    }
                     
                     i = today.length;
                 }
