@@ -21,6 +21,8 @@ function Main(){
         this.mXML = new ManagerXML("programacion.xml");
         this.mXML.openFile();
         
+        console.log(this.mXML.programA.idP);// indefinido
+        
         this.actualP.copy(this.mXML.programA);
         this.nextP.copy(this.mXML.programN);
 

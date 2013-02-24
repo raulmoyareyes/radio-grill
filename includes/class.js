@@ -141,32 +141,84 @@ function ManagerXML(_fileXML){
     this.dateUTC = new DateUTC1();
     this.programA = new Program();
     this.programN = new Program();
+    this.browser = undefined;
 
     this.openFile = function() {
-        var xhttp;
+
+        var xmlDoc=undefined;
         try {
-            if (window.XMLHttpRequest){
-                    xhttp=new XMLHttpRequest();
-            } else { // IE 5 / 6
-                    xhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            if (document.all) { //IE
+                xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+            } else { //firefox
+                xmlDoc = document.implementation.createDocument("","",null);
             }
-            xhttp.open("GET","programacion.xml",false);
-            xhttp.send();
-            this.programs = xhttp.responseXML;
-
-            this.loadPrograms(); // cargar programas
-
-        } catch (e) {
-            console.log("Se produjo un error abriendo el fichero");
+            xmlDoc.async=false;
+            xmlDoc.load(this.file);
+            this.programs = xmlDoc;
+            this.browser = "IE";
+            this.loadProgramsIE();
+            
+        } catch(e){
+            try { //otros safari, chrome
+                var xmlhttp = new window.XMLHttpRequest();
+                xmlhttp.open("GET",this.file,false);
+                xmlhttp.send(null);
+                xmlDoc = xmlhttp.responseXML.documentElement;
+                this.programs = xmlDoc;
+                this.browser = "CH";
+                this.loadProgramsCH();
+            } catch (e){
+                console.log("Error al leer el fichero xml");
+            }
         }
     };
-
-    // carga todos los programas y los devuelve
-    this.loadPrograms = function(){
+    
+    this.loadProgramsIE = function() {
         try {
+            this.dateUTC.actualize();
+            var program = this.programs.getElementsByTagName("week");
+            program = program[0].childNodes;
+            //console.log(program[1].childNodes[0].childNodes[0].nodeValue); // idP
+            //console.log(program[1].childNodes[0].attributes[0].nodeValue); // hora
+            
+            var today = program[this.dateUTC.dayW].childNodes;
+            var tomorrow;
+            if(this.dateUTC.dayW+1 === 7){ // controlar que no se acabe la semana
+                tomorrow = program[0].childNodes; 
+            } else {
+                tomorrow = program[this.dateUTC.dayW+1].childNodes; 
+            }
+            
+            for(var i=0; i<today.length; i++){
+
+                var horaIE = today[i].attributes[0].nodeValue;
+                var n = horaIE.split("-");
+                var horaI = n[0];
+                var horaE = n[1];
+                
+                if(horaE==="0000"){horaE="2400";}
+
+                if(horaI <= this.dateUTC.sHour && this.dateUTC.sHour < horaE){
+                    console.log(horaI);
+                    console.log(horaE);
+                    
+                    i = today.length;
+                }
+            }
+            
+        } catch (e) {
+            console.log("Se produjo un error en la carga de los datos");
+        }
+    };
+    
+    this.loadProgramsCH = function() {
+        try {
+            
             var program = this.programs.getElementsByTagName("week");
             program = program[0].childNodes;
             this.dateUTC.actualize();
+            
+            console.log(program);
 
             var today = program[this.dateUTC.dayW*2+1].childNodes;
             var tomorrow;
@@ -256,8 +308,17 @@ function ManagerXML(_fileXML){
 
         } 
         catch(e) {
-                console.log("Se produjo un error en la carga de los datos");
-        }    
+            console.log("Se produjo un error en la carga de los datos");
+        }
+    };
+
+    // carga todos los programas y los devuelve
+    this.loadPrograms = function(){
+        if(this.browser === "IE"){
+            this.loadProgramsIE();
+        } else {
+            this.loadProgramsCH();
+        }
 
     };
 
