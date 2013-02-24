@@ -178,8 +178,6 @@ function ManagerXML(_fileXML){
             this.dateUTC.actualize();
             var program = this.programs.getElementsByTagName("week");
             program = program[0].childNodes;
-            //console.log(program[1].childNodes[0].childNodes[0].nodeValue); // idP
-            //console.log(program[1].childNodes[0].attributes[0].nodeValue); // hora
             
             var today = program[this.dateUTC.dayW].childNodes;
             var tomorrow;
@@ -199,8 +197,6 @@ function ManagerXML(_fileXML){
                 if(horaE==="0000"){horaE="2400";}
 
                 if(horaI <= this.dateUTC.sHour && this.dateUTC.sHour < horaE){
-//                    console.log(horaI);
-//                    console.log(horaE);
                     if(this.programA.idP !== today[i].childNodes[0].nodeValue) {
                         var program2 = this.programs.getElementsByTagName(today[i].childNodes[0].nodeValue);
 
