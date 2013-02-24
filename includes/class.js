@@ -546,6 +546,8 @@ function GraphInterface(){
     };
 
     this.actualize = function(_actualP, _nextP){
+        // para una proxima actualizacion controlar si el siguiente es audio no actualice reproductor
+        
         this.actualP = _actualP;
         this.nextP = _nextP;
         this.remove();
