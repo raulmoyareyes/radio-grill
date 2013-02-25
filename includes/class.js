@@ -148,8 +148,8 @@ function ManagerXML(_fileXML){
         try {
             if (document.all) { //IE
                 xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
-            } else { //firefox
-                xmlDoc = document.implementation.createDocument("","",null);
+//            } else { //firefox
+//                xmlDoc = document.implementation.createDocument("","",null);
             }
             xmlDoc.async=false;
             xmlDoc.load(this.file);
@@ -227,10 +227,10 @@ function ManagerXML(_fileXML){
                             horaE = n[1];
                                                        
                         } else {
-                            var program2 = this.programs.getElementsByTagName(tomorrow[1].childNodes[0].nodeValue);
+                            var program2 = this.programs.getElementsByTagName(tomorrow[0].childNodes[0].nodeValue);
 
-                            _idP = tomorrow[1].childNodes[0].nodeValue;
-                            horaIE = tomorrow[1].attributes[0].nodeValue;
+                            _idP = tomorrow[0].childNodes[0].nodeValue;
+                            horaIE = tomorrow[0].attributes[0].nodeValue;
                             n = horaIE.split("-");
                             horaI = n[0];
                             horaE = n[1];
@@ -261,7 +261,7 @@ function ManagerXML(_fileXML){
             }
             
         } catch (e) {
-            console.log("Se produjo un error en la carga de los datos");
+            console.log("Se produjo un error en la carga de los datos (IExplorer)");
         }
     };
     
